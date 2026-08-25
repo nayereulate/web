@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Nayer | Eulate — Sobre mí, creaciones, releases y servicios</title>
+<meta name="description" content="Nayer | Eulate — Founder, streamer y desarrollador. Releases de mis apps, servicios de software a medida, donaciones y la historia detrás de mi próxima startup en Bolivia.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%230d0221%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%223%22%20height%3D%223%22%20fill%3D%22%2300f0ff%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%223%22%20width%3D%223%22%20height%3D%223%22%20fill%3D%22%23ff2bd6%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%2210%22%20width%3D%2210%22%20height%3D%223%22%20fill%3D%22%23ffe66d%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+<div id="bg"></div>
+<div class="aurora"><span></span><span></span><span></span></div>
+<canvas id="bg-canvas"></canvas>
+<div class="grid-floor"></div>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+<div class="cursor-glow"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">NAYER<span>|</span>EULATE</a>
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="topnav">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="topnav" id="topnav">
+    <a href="#sobre-nayer">Sobre mí</a>
+    <a href="#creaciones">Creaciones</a>
+    <a href="#releases">Releases</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#donaciones" class="donate-trigger">Donar</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <a class="back-btn" href="index.html">← Mis links</a>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-avatar avatar-frame reveal">
+      <img src="fotoPixel.jpg" alt="Avatar pixel-art de Nayer Eulate">
+      <span class="status-dot" title="En vivo ahora"></span>
+    </div>
+    <div class="badges">
+      <span class="badge badge-cyan">FOUNDER</span>
+      <span class="badge badge-pink">STREAMER</span>
+      <span class="badge badge-yellow">DEV</span>
+    </div>
+    <h1 class="glitch" data-text="NAYER | EULATE">NAYER&nbsp;|&nbsp;EULATE</h1>
+    <p class="hero-sub">Construyo software, transmito en vivo y estoy levantando mi propia startup tech desde Bolivia 🇧🇴</p>
+    <div class="hero-cta">
+      <a href="#creaciones" class="btn btn-solid">🕹️ VER MIS CREACIONES</a>
+      <a href="#servicios" class="btn btn-outline">💼 CONTRATAR SERVICIOS</a>
+      <a href="#releases" class="btn btn-outline">📦 RELEASES</a>
+      <a href="#donaciones" class="btn btn-outline donate-trigger">💖 APOYAR</a>
+    </div>
+  </section>
+
+  <section id="sobre-nayer" class="section">
+    <h2 class="section-title"><span class="tag">01</span> SOBRE NAYER</h2>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Soy Nayer Eulate: de día escribo código, de noche transmito en vivo, y en el fondo siempre estoy
+        construyendo algo más grande. Empecé programando por curiosidad friki — juegos, herramientas para mi
+        propio stream, automatizaciones — y con el tiempo eso se convirtió en oficio.</p>
+
+        <p>Actualmente soy estudiante de <strong>Ingeniería Informática en la UMSS</strong> (Universidad Mayor
+        de San Simón). Fuera del código me vas a encontrar viendo anime o metido en algún videojuego — esa
+        mezcla de curiosidad friki y ganas de crear es lo que me empuja a construir herramientas útiles todo
+        el tiempo, no solo proyectos de clase.</p>
+
+        <p>Hoy estoy fundando mi propia startup de tecnología <strong>desde Bolivia</strong>. Creo que el talento
+        técnico boliviano no tiene nada que envidiarle a nadie, pero le faltan productos propios, capital y
+        casos de éxito visibles. Mi objetivo es construir uno de esos casos: software hecho acá, con estándares
+        globales, que resuelva problemas reales para negocios locales y también compita afuera.</p>
+
+        <p>El streaming no es solo entretenimiento para mí — es donde documento el proceso: bugs en vivo,
+        decisiones de producto, la parte real de emprender que casi nadie muestra.</p>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar-card reveal">
+          <span class="pillar-icon">🇧🇴</span>
+          <h3>Bolivia primero</h3>
+          <p>Construir desde acá, para el mercado local y para exportar talento y producto.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <span class="pillar-icon">🔧</span>
+          <h3>Código con criterio</h3>
+          <p>Software a medida bien hecho, no plantillas genéricas. Cada proyecto se piensa antes de picar código.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <span class="pillar-icon">📡</span>
+          <h3>Proceso en público</h3>
+          <p>Comparto el camino de emprender y programar en vivo, con la comunidad, sin filtro corporativo.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <span class="pillar-icon">🎌</span>
+          <h3>Otaku & gamer</h3>
+          <p>Anime y videojuegos de fondo siempre — de ahí sale buena parte de la inspiración para lo que construyo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="creaciones" class="section">
+    <h2 class="section-title"><span class="tag">02</span> MIS CREACIONES</h2>
+    <p class="section-lead">Proyectos propios que he construido de principio a fin — de la idea al ejecutable.</p>
+
+    <div class="projects-grid">
+      <article class="project-card reveal">
+        <div class="project-head">
+          <span class="project-icon">📱</span>
+          <h3>NayerControl</h3>
+        </div>
+        <p>Aplicación de escritorio para Windows que controla un celular Android de forma inalámbrica.
+        Es una interfaz gráfica sobre <code>scrcpy</code> y <code>adb</code>: emparejas el teléfono una vez por
+        USB y luego se reconecta solo por Wi-Fi, sin cables.</p>
+        <div class="tags">
+          <span>Python</span><span>PySide6</span><span>Desktop</span>
+        </div>
+        <a href="https://github.com/nayereulate/NayerControl" class="project-link" target="_blank" rel="noopener">Ver proyecto ▶</a>
+      </article>
+
+      <article class="project-card project-card--add reveal">
+        <span class="project-icon">➕</span>
+        <h3>Tu próximo proyecto</h3>
+        <p>Este espacio está listo para el siguiente build. Agrega tu proyecto, demo o repo aquí cuando lo publiques.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="releases" class="section">
+    <h2 class="section-title"><span class="tag">03</span> RELEASES</h2>
+    <p class="section-lead">Últimas versiones publicadas de mis apps en GitHub. Esta lista crece cada vez que sale un build nuevo.</p>
+
+    <div class="releases-grid" id="releasesGrid">
+      <article class="release-card release-card--add reveal">
+        <span class="release-icon">➕</span>
+        <h3>Próximo release</h3>
+        <p>Cuando publique una nueva versión de alguna app, su enlace al release de GitHub aparecerá aquí.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="servicios" class="section">
+    <h2 class="section-title"><span class="tag">04</span> SERVICIOS DE SOFTWARE A MEDIDA</h2>
+    <p class="section-lead">Si tu negocio necesita una herramienta que no existe en el mercado, la construyo.</p>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-icon">🌐</span>
+        <h3>Desarrollo web</h3>
+        <p>Sitios, landing pages y paneles a medida, rápidos y fáciles de mantener.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">🖥️</span>
+        <h3>Apps de escritorio</h3>
+        <p>Herramientas internas para Windows que automatizan procesos manuales de tu equipo.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">🤖</span>
+        <h3>Bots y automatización</h3>
+        <p>Bots de Discord/Telegram, scripts de automatización y flujos que te ahorran horas cada semana.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">🧭</span>
+        <h3>Consultoría técnica</h3>
+        <p>Revisión de arquitectura, elección de stack y acompañamiento para llevar tu idea a producto.</p>
+      </div>
+    </div>
+
+    <div class="services-cta">
+      <a href="#contacto" class="btn btn-solid">HABLEMOS DE TU PROYECTO</a>
+    </div>
+  </section>
+
+  <section id="contacto" class="section section-contact">
+    <h2 class="section-title"><span class="tag">05</span> CONTACTO</h2>
+    <p class="section-lead">¿Tienes un proyecto en mente o quieres seguir la startup de cerca?</p>
+    <a class="btn btn-solid btn-big" href="mailto:nayereulate0.0@gmail.com">✉️ ESCRÍBEME</a>
+    <a class="btn btn-outline" href="index.html">🕹️ VER TODOS MIS LINKS</a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>PRESS START © 2026 · Nayer | Eulate · hecho con 👾 pixel power</p>
+</footer>
+
+<!-- Widget de donaciones: flotante a la derecha, siempre visible -->
+<button class="donate-tab" id="donateTab" type="button" aria-expanded="false" aria-controls="donatePanel">
+  <span class="donate-tab__icon">💖</span>
+  <span class="donate-tab__label">DONAR</span>
+</button>
+
+<aside class="donate-panel" id="donatePanel" aria-hidden="true">
+  <button class="donate-panel__close" id="donateClose" type="button" aria-label="Cerrar donaciones">✕</button>
+  <h3>APOYA EL PROYECTO</h3>
+  <p>Cada donación ayuda a que siga creando apps, streams y la startup desde Bolivia. ¡Gracias! 💜</p>
+
+  <div class="qr-frame">
+    <!-- Para poner tu QR real, reemplaza el div .qr-placeholder por:
+         <img src="qr-donacion.png" alt="Código QR para donaciones"> -->
+    <div class="qr-placeholder">
+      <span class="qr-emoji">📷</span>
+      <span class="hint">TU QR<br>AQUÍ</span>
+    </div>
+    <span class="qr-corner qr-corner--tl"></span>
+    <span class="qr-corner qr-corner--tr"></span>
+    <span class="qr-corner qr-corner--bl"></span>
+    <span class="qr-corner qr-corner--br"></span>
+  </div>
+
+  <div class="donate-alias">
+    <code id="aliasText">tu-alias-aqui</code>
+    <button class="btn btn-outline" id="copyAliasBtn" type="button" data-alias="tu-alias-aqui">📋 COPIAR</button>
+  </div>
+  <p class="donate-note">Reemplaza el QR y el alias aquí con tus datos reales.</p>
+</aside>
+
+<button class="back-to-top" id="backTop" type="button" title="Volver arriba" aria-label="Volver arriba">▲</button>
+
+<script src="js/background.js"></script>
+<script src="js/releases.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/landing.js"></script>
+</body>
+</html>
