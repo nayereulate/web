@@ -1,8 +1,8 @@
 // ===== Typing effect =====
 const phrases = [
-  'Founder de mi propia startup',
-  'Streamer 100% friki',
-  'Dev de dia y de noche',
+  'Estudiante de Ingenieria Informatica',
+  'Creador de contenido 100% friki',
+  'Creo herramientas por diversion',
   'Bienvenido a mi base secreta'
 ];
 const typedEl = document.getElementById('typed');
