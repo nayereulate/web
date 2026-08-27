@@ -14,7 +14,7 @@
   }
 
   // ----- 3D tilt + spotlight on cards -----
-  const tiltEls = document.querySelectorAll('.pillar-card, .project-card, .service-card, .release-card, .link-btn');
+  const tiltEls = document.querySelectorAll('.pillar-card, .project-card, .service-card, .release-card, .social-btn');
   if (!reduced) {
     tiltEls.forEach((el) => {
       el.addEventListener('pointermove', (e) => {
@@ -37,7 +37,7 @@
   }
 
   // ----- Magnetic pull on primary buttons -----
-  const magnets = document.querySelectorAll('.btn, .link-btn, .back-btn, .share-btn, .donate-tab, .back-to-top');
+  const magnets = document.querySelectorAll('.btn, .social-btn, .back-btn, .share-btn, .donate-tab, .back-to-top');
   if (!reduced) {
     magnets.forEach((el) => {
       el.addEventListener('pointermove', (e) => {
@@ -55,7 +55,7 @@
   }
 
   // ----- Pixel click ripple -----
-  document.querySelectorAll('.link-btn, .btn, .donate-tab, .back-to-top').forEach((btn) => {
+  document.querySelectorAll('.social-btn, .btn, .donate-tab, .back-to-top').forEach((btn) => {
     btn.addEventListener('click', function (e) {
       const rect = btn.getBoundingClientRect();
       const ripple = document.createElement('span');

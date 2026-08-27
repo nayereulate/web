@@ -206,8 +206,8 @@ a{ color:inherit; }
 }
 .badge{
   font-family:'Press Start 2P', monospace;
-  font-size:8px;
-  padding:6px 8px;
+  font-size:clamp(8px, 0.55vw, 12px);
+  padding:clamp(6px, 0.5vw, 9px) clamp(8px, 0.6vw, 12px);
   border:2px solid;
   background:var(--bg-deep);
   letter-spacing:1px;
@@ -224,9 +224,9 @@ a{ color:inherit; }
   display:inline-flex;
   align-items:center;
   gap:8px;
-  padding:14px 18px;
+  padding:clamp(11px, 1.2vw, 16px) clamp(14px, 1.7vw, 20px);
   font-family:'Press Start 2P', monospace;
-  font-size:11px;
+  font-size:clamp(9px, 0.75vw, 13px);
   text-decoration:none;
   border:3px solid var(--text);
   cursor:pointer;
@@ -240,11 +240,72 @@ a{ color:inherit; }
 .btn:hover{ transform:translate(2px,2px); box-shadow:2px 2px 0 0 var(--cyan); }
 .btn-outline:hover{ box-shadow:2px 2px 0 0 var(--purple); }
 .btn:active{ transform:translate(4px,4px); box-shadow:0 0 0 0; }
-.btn-big{ font-size:13px; padding:18px 24px; }
+.btn-big{ font-size:clamp(11px, 0.85vw, 15px); padding:clamp(14px, 1.6vw, 20px) clamp(18px, 2.2vw, 28px); }
 
 @keyframes pixelRipple{
   to{ transform:scale(9); opacity:0; }
 }
+
+/* ================= Hero shell (shared) ================= */
+.hero{
+  position:relative;
+  z-index:4;
+  max-width:clamp(320px, 66vw, 1200px);
+  margin:9vh auto 8vh;
+  padding:0 24px;
+  text-align:center;
+}
+.hero .glitch{ font-size:clamp(14px, 1.7vw, 30px); }
+.hero-sub{
+  font-size:clamp(16px, 1.3vw, 26px);
+  color:var(--cyan);
+  max-width:52ch;
+  margin:0 auto 28px;
+  text-wrap:balance;
+}
+.hero-cta{ display:flex; justify-content:center; gap:clamp(10px, 1vw, 20px); flex-wrap:wrap; }
+
+/* ================= Avatar (shared) ================= */
+.hero-avatar{
+  width:clamp(84px, 9.5vw, 170px);
+  height:clamp(84px, 9.5vw, 170px);
+  margin:0 auto 18px;
+}
+.avatar-frame{
+  position:relative;
+  background:var(--bg-deep);
+  border:4px solid var(--yellow);
+  box-shadow:0 0 0 4px var(--bg-deep), 0 0 0 8px var(--cyan), 0 0 26px rgba(0,240,255,.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  image-rendering:pixelated;
+  animation:floaty 3s ease-in-out infinite;
+}
+.avatar-frame img{ width:100%; height:100%; object-fit:cover; image-rendering:pixelated; }
+@keyframes floaty{
+  0%,100%{ transform:translateY(0); }
+  50%{ transform:translateY(-8px); }
+}
+.status-dot{
+  position:absolute;
+  bottom:-4px;
+  right:-4px;
+  width:18px;
+  height:18px;
+  background:var(--green);
+  border:3px solid var(--bg-deep);
+  box-shadow:0 0 10px var(--green);
+  animation:pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{ opacity:1; transform:scale(1); }
+  50%{ opacity:.6; transform:scale(1.15); }
+}
+
+/* ================= Shared footer ================= */
+.site-footer{ position:relative; z-index:4; text-align:center; padding:32px 24px 48px; font-size:13px; color:var(--muted); letter-spacing:.5px; }
 
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }

@@ -1,45 +1,21 @@
 /* =========================================================================
-   NAYER | EULATE — Hub / Linktree page (index.html only)
+   NAYER | EULATE — Homepage (index.html only)
    ========================================================================= */
 
-body.home{ display:flex; min-height:100vh; }
-
-/* ===== Card ===== */
-.card{
+/* synthwave sun behind the avatar — wrap auto-sizes to whatever size
+   .hero-avatar's fluid clamp() resolves to, no fixed width to keep in sync */
+.avatar-wrap{
   position:relative;
-  z-index:4;
-  max-width:480px;
-  margin:8vh auto 6vh;
-  padding:2px;
-  background:conic-gradient(from var(--angle), var(--cyan), var(--purple), var(--pink), var(--yellow), var(--cyan));
-  animation:rotateBorder 6s linear infinite;
-  clip-path:polygon(
-    0 12px, 12px 12px, 12px 0,
-    calc(100% - 12px) 0, calc(100% - 12px) 12px, 100% 12px,
-    100% calc(100% - 12px), calc(100% - 12px) calc(100% - 12px), calc(100% - 12px) 100%,
-    12px 100%, 12px calc(100% - 12px), 0 calc(100% - 12px)
-  );
-  box-shadow:0 0 40px rgba(255,43,214,.35), 0 0 80px rgba(0,240,255,.15);
+  width:fit-content;
+  margin:0 auto 18px;
 }
-@keyframes rotateBorder{ to{ --angle:360deg; } }
-
-.card-inner{
-  position:relative;
-  background:var(--card-bg);
-  padding:36px 22px 28px;
-  clip-path:inherit;
-  -webkit-backdrop-filter:blur(6px);
-  backdrop-filter:blur(6px);
-}
-
-/* synthwave sun behind avatar */
 .sun{
   position:absolute;
-  top:-72px;
+  top:clamp(-90px, -9vw, -50px);
   left:50%;
   transform:translateX(-50%);
-  width:150px;
-  height:150px;
+  width:clamp(112px, 13vw, 220px);
+  height:clamp(112px, 13vw, 220px);
   border-radius:50%;
   background:linear-gradient(180deg, var(--yellow) 0%, var(--pink) 55%, var(--purple) 100%);
   box-shadow:0 0 60px rgba(255,43,214,.6);
@@ -60,109 +36,59 @@ body.home{ display:flex; min-height:100vh; }
   50%{ filter:brightness(1.15); }
 }
 
-/* ===== Avatar ===== */
-.avatar-frame{
-  position:relative;
-  width:112px;
-  height:112px;
-  margin:0 auto 14px;
-  background:var(--bg-deep);
-  border:4px solid var(--yellow);
-  box-shadow:0 0 0 4px var(--bg-deep), 0 0 0 8px var(--cyan), 0 0 26px rgba(0,240,255,.6);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  image-rendering:pixelated;
-  animation:floaty 3s ease-in-out infinite;
-}
-.avatar-frame img{ width:100%; height:100%; object-fit:cover; image-rendering:pixelated; }
-@keyframes floaty{
-  0%,100%{ transform:translateY(0); }
-  50%{ transform:translateY(-8px); }
-}
-.status-dot{
-  position:absolute;
-  bottom:-4px;
-  right:-4px;
-  width:18px;
-  height:18px;
-  background:var(--green);
-  border:3px solid var(--bg-deep);
-  box-shadow:0 0 10px var(--green);
-  animation:pulse 1.4s ease-in-out infinite;
-}
-@keyframes pulse{
-  0%,100%{ opacity:1; transform:scale(1); }
-  50%{ opacity:.6; transform:scale(1.15); }
-}
-
-/* ===== Tagline ===== */
+/* ===== Tagline (typing effect) ===== */
 .tagline{
   text-align:center;
-  font-size:clamp(15px, 4.5vw, 20px);
+  font-size:clamp(14px, 1.3vw, 24px);
   color:var(--cyan);
   min-height:1.4em;
-  margin:0 0 22px;
+  margin:0 0 32px;
 }
 .cursor{ animation:blink 1s steps(1) infinite; color:var(--pink); }
 @keyframes blink{ 50%{ opacity:0; } }
 
-/* ===== Links ===== */
-.links{ display:flex; flex-direction:column; gap:14px; }
-.links--main{
-  margin-bottom:22px;
-  padding-bottom:22px;
-  border-bottom:2px dashed rgba(234,246,255,.25);
+/* ===== Social icon grid ===== */
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(clamp(76px, 6.5vw, 130px), 1fr));
+  gap:clamp(10px, 1vw, 20px);
+  max-width:clamp(280px, 42vw, 780px);
+  margin:0 auto 32px;
 }
-.link-btn--section{
-  font-size:12px;
-  padding:16px;
-  background:linear-gradient(135deg, var(--bg-mid), #2a1152);
-}
-.link-btn--section .label{ letter-spacing:1px; }
-.link-btn[data-color="creaciones"]{ --shadow-c:#39ff88; color:#c8ffe0; border-color:var(--green); }
-.link-btn[data-color="sobre"]{ --shadow-c:#00f0ff; color:#c8fbff; border-color:var(--cyan); }
-
-.link-btn{
+.social-btn{
   --tx:0px; --ty:0px;
   display:flex;
+  flex-direction:column;
   align-items:center;
-  gap:12px;
-  padding:14px 16px;
+  gap:8px;
+  padding:clamp(12px, 1.2vw, 20px) clamp(8px, 1vw, 14px);
   background:var(--bg-mid);
   border:3px solid var(--text);
   color:var(--text);
   text-decoration:none;
-  font-family:'Press Start 2P', monospace;
-  font-size:11px;
   position:relative;
   overflow:hidden;
   box-shadow:4px 4px 0 0 var(--shadow-c, var(--pink));
   transition:transform .15s var(--ease-out), box-shadow .15s var(--ease-out), background .2s ease, color .2s ease;
   transform:translate(var(--tx), var(--ty));
 }
-.link-btn:hover, .link-btn:focus-visible{ box-shadow:2px 2px 0 0 var(--shadow-c, var(--pink)); }
-.link-btn:active{ transform:translate(4px,4px) !important; box-shadow:0 0 0 0 var(--shadow-c, var(--pink)); }
-.link-btn .icon{ width:26px; height:26px; flex:0 0 auto; display:flex; align-items:center; justify-content:center; }
-.link-btn .icon svg{ width:22px; height:22px; }
-.link-btn .label{ flex:1; }
-.link-btn .arrow{ opacity:0; transform:translateX(-6px); transition:all .2s ease; font-size:10px; }
-.link-btn:hover .arrow{ opacity:1; transform:translateX(0); }
+.social-btn:hover, .social-btn:focus-visible{ box-shadow:2px 2px 0 0 var(--shadow-c, var(--pink)); background:#241242; }
+.social-btn:active{ transform:translate(4px,4px) !important; box-shadow:0 0 0 0 var(--shadow-c, var(--pink)); }
+.social-icon{ width:clamp(22px, 1.8vw, 34px); height:clamp(22px, 1.8vw, 34px); display:flex; align-items:center; justify-content:center; }
+.social-icon svg{ width:100%; height:100%; }
+.social-label{ font-family:'Press Start 2P', monospace; font-size:clamp(8px, 0.6vw, 11px); letter-spacing:.5px; }
 
-.link-btn[data-color="youtube"]{ --shadow-c:#ff0033; color:#ff5c7a; }
-.link-btn[data-color="twitch"]{ --shadow-c:#9146ff; color:#c9a8ff; }
-.link-btn[data-color="instagram"]{ --shadow-c:#ff2bd6; color:#ff9fe8; }
-.link-btn[data-color="tiktok"]{ --shadow-c:#00f0ff; color:#8ff6ff; }
-.link-btn[data-color="github"]{ --shadow-c:#39ff88; color:#a8ffcb; }
-.link-btn[data-color="discord"]{ --shadow-c:#a239ff; color:#d3b3ff; }
-.link-btn[data-color="startup"]{ --shadow-c:#ffe66d; color:#fff3b0; border-color:var(--yellow); }
-.link-btn:hover{ background:#241242; }
+.social-btn[data-color="youtube"]{ --shadow-c:#ff0033; color:#ff5c7a; }
+.social-btn[data-color="twitch"]{ --shadow-c:#9146ff; color:#c9a8ff; }
+.social-btn[data-color="instagram"]{ --shadow-c:#ff2bd6; color:#ff9fe8; }
+.social-btn[data-color="tiktok"]{ --shadow-c:#00f0ff; color:#8ff6ff; }
+.social-btn[data-color="github"]{ --shadow-c:#39ff88; color:#a8ffcb; }
+.social-btn[data-color="discord"]{ --shadow-c:#a239ff; color:#d3b3ff; }
 
 /* ===== Share button ===== */
 .share-btn{
   display:block;
-  margin:22px auto 0;
+  margin:26px auto 0;
   padding:10px 14px;
   background:transparent;
   border:2px dashed var(--yellow);
@@ -176,30 +102,8 @@ body.home{ display:flex; min-height:100vh; }
 .share-btn:hover{ background:var(--yellow); color:var(--bg-deep); transform:translateY(-2px); }
 .share-btn.copied{ background:var(--green); border-color:var(--green); color:var(--bg-deep); }
 
-/* ===== Footer ===== */
-footer{ text-align:center; margin-top:22px; font-size:13px; color:var(--muted); letter-spacing:.5px; }
-
-/* ===== Responsive ===== */
-@media (max-width:520px){
-  .card{ margin:6vh 14px 4vh; }
-  .card-inner{ padding:32px 16px 22px; }
-  .glitch{ font-size:12px; }
-  .link-btn{ font-size:10px; padding:12px 12px; }
-}
-@media (max-width:380px){
-  .card{ margin:5vh 10px 3vh; }
-  .card-inner{ padding:28px 14px 20px; }
-  .sun{ width:120px; height:120px; top:-58px; }
-  .avatar-frame{ width:92px; height:92px; }
-  .glitch{ font-size:10px; }
-  .badges{ gap:6px; }
-  .badge{ font-size:7px; padding:5px 6px; }
-  .link-btn{ font-size:9px; padding:10px 10px; gap:8px; }
-  .link-btn .icon{ width:22px; height:22px; }
-  .link-btn .icon svg{ width:18px; height:18px; }
-}
+/* ===== Responsive: cases the fluid clamp()s above can't cover ===== */
 @media (max-height:600px) and (orientation:landscape){
-  .card{ margin:3vh auto; }
   .sun{ display:none; }
-  .avatar-frame{ width:72px; height:72px; margin-bottom:8px; }
+  .hero-avatar{ width:72px; height:72px; }
 }

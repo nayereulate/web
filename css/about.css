@@ -53,25 +53,6 @@
 }
 .back-btn:hover{ background:transparent; color:var(--yellow); transform:translateY(-2px); }
 
-/* ===== Hero ===== */
-.hero{
-  position:relative;
-  z-index:4;
-  max-width:760px;
-  margin:9vh auto 8vh;
-  padding:0 24px;
-  text-align:center;
-}
-.hero .glitch{ font-size:clamp(16px, 4vw, 22px); }
-.hero-sub{
-  font-size:22px;
-  color:var(--cyan);
-  max-width:52ch;
-  margin:0 auto 28px;
-  text-wrap:balance;
-}
-.hero-cta{ display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
-
 /* ===== Sections ===== */
 .section{ position:relative; z-index:4; max-width:920px; margin:0 auto; padding:64px 24px; }
 .section-title{
@@ -143,52 +124,10 @@
 .section-contact{ text-align:center; }
 .section-contact .btn{ margin:8px; }
 
-/* ===== Footer ===== */
-.site-footer{ position:relative; z-index:4; text-align:center; padding:32px 24px 48px; font-size:13px; color:var(--muted); letter-spacing:.5px; }
-
 /* ===== Reveal on scroll ===== */
 .reveal{ opacity:0; transform:translateY(28px); transition:opacity .6s var(--ease-out), transform .6s var(--ease-out); }
 .reveal.in-view{ opacity:1; transform:translateY(0); }
 @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
-
-/* ===== Hero avatar (character) ===== */
-.hero-avatar{
-  width:104px;
-  height:104px;
-  margin:0 auto 18px;
-}
-.avatar-frame{
-  position:relative;
-  background:var(--bg-deep);
-  border:4px solid var(--yellow);
-  box-shadow:0 0 0 4px var(--bg-deep), 0 0 0 8px var(--cyan), 0 0 26px rgba(0,240,255,.6);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  image-rendering:pixelated;
-  animation:floaty 3s ease-in-out infinite;
-}
-.avatar-frame img{ width:100%; height:100%; object-fit:cover; image-rendering:pixelated; }
-@keyframes floaty{
-  0%,100%{ transform:translateY(0); }
-  50%{ transform:translateY(-8px); }
-}
-.status-dot{
-  position:absolute;
-  bottom:-4px;
-  right:-4px;
-  width:18px;
-  height:18px;
-  background:var(--green);
-  border:3px solid var(--bg-deep);
-  box-shadow:0 0 10px var(--green);
-  animation:pulse 1.4s ease-in-out infinite;
-}
-@keyframes pulse{
-  0%,100%{ opacity:1; transform:scale(1); }
-  50%{ opacity:.6; transform:scale(1.15); }
-}
 
 /* ===== Mobile nav toggle ===== */
 .nav-toggle{
