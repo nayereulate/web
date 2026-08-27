@@ -100,7 +100,7 @@ body.home{ display:flex; min-height:100vh; }
 /* ===== Tagline ===== */
 .tagline{
   text-align:center;
-  font-size:20px;
+  font-size:clamp(15px, 4.5vw, 20px);
   color:var(--cyan);
   min-height:1.4em;
   margin:0 0 22px;
@@ -185,4 +185,21 @@ footer{ text-align:center; margin-top:22px; font-size:13px; color:var(--muted); 
   .card-inner{ padding:32px 16px 22px; }
   .glitch{ font-size:12px; }
   .link-btn{ font-size:10px; padding:12px 12px; }
+}
+@media (max-width:380px){
+  .card{ margin:5vh 10px 3vh; }
+  .card-inner{ padding:28px 14px 20px; }
+  .sun{ width:120px; height:120px; top:-58px; }
+  .avatar-frame{ width:92px; height:92px; }
+  .glitch{ font-size:10px; }
+  .badges{ gap:6px; }
+  .badge{ font-size:7px; padding:5px 6px; }
+  .link-btn{ font-size:9px; padding:10px 10px; gap:8px; }
+  .link-btn .icon{ width:22px; height:22px; }
+  .link-btn .icon svg{ width:18px; height:18px; }
+}
+@media (max-height:600px) and (orientation:landscape){
+  .card{ margin:3vh auto; }
+  .sun{ display:none; }
+  .avatar-frame{ width:72px; height:72px; margin-bottom:8px; }
 }
