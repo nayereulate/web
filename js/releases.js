@@ -8,12 +8,27 @@
 //   date        -> "YYYY-MM-DD"
 //   icon        -> un emoji
 //   notes       -> descripción corta de qué trae el release
-//   downloadUrl -> enlace DIRECTO al archivo del asset en GitHub
-//                  (Releases del repo -> click derecho al asset -> copiar
-//                  enlace; tiene el patrón
-//                  https://github.com/<user>/<repo>/releases/download/<tag>/<archivo>)
+//   downloads   -> lista de botones de descarga, uno por plataforma:
+//                  [{ label: 'Windows', url: '...' }, { label: 'Android', url: '...' }]
+//                  Usa el patrón "latest/download" para que el link nunca
+//                  quede desactualizado al publicar una versión nueva:
+//                  https://github.com/<user>/<repo>/releases/latest/download/<archivo>
+//                  (el nombre del archivo debe ser igual en todos los releases)
+//   downloadUrl -> alternativa a "downloads" cuando solo hay un archivo
+//                  (enlace directo al asset, ver ejemplo de NayerControl)
 // =========================================================================
 window.RELEASES = [
+  {
+    app: 'NayerVR',
+    version: 'v1.0.0',
+    date: '2026-08-27',
+    icon: '🥽',
+    notes: 'Primera versión: mirror del monitor de tu PC a una VR box genérica por USB/WiFi.',
+    downloads: [
+      { label: '🖥️ Windows', url: 'https://github.com/nayereulate/NayerVR/releases/latest/download/NayerVR-Setup.exe' },
+      { label: '📱 Android', url: 'https://github.com/nayereulate/NayerVR/releases/latest/download/NayerVR.apk' }
+    ]
+  },
   {
     app: 'NayerControl',
     version: 'v1.0.0',
@@ -48,15 +63,24 @@ window.RELEASES = [
       '</div>' +
       '<p></p>' +
       '<div class="release-meta"><span class="release-date"></span></div>' +
-      '<a class="project-link" rel="noopener">⬇ DESCARGAR</a>';
+      '<div class="release-downloads"></div>';
 
     card.querySelector('h3').textContent = r.app;
     card.querySelector('.release-version').textContent = r.version;
     card.querySelector('p').textContent = r.notes;
     card.querySelector('.release-date').textContent = '🗓 ' + formatDate(r.date);
-    const link = card.querySelector('a');
-    link.href = r.downloadUrl;
-    link.setAttribute('download', '');
+
+    const downloads = r.downloads || [{ label: '⬇ DESCARGAR', url: r.downloadUrl }];
+    const downloadsWrap = card.querySelector('.release-downloads');
+    downloads.forEach((d) => {
+      const link = document.createElement('a');
+      link.className = 'project-link';
+      link.rel = 'noopener';
+      link.href = d.url;
+      link.textContent = d.label;
+      link.setAttribute('download', '');
+      downloadsWrap.appendChild(link);
+    });
 
     grid.insertBefore(card, addCard);
   });
