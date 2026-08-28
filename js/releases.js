@@ -20,7 +20,7 @@ window.RELEASES = [
     date: '2026-08-16',
     icon: '📱',
     notes: 'Primera versión estable: controla tu Android por USB en tu PC, con emparejamiento WIFI (BETA).',
-    downloadUrl: 'https://github.com/nayereulate/NayerControl/releases/download/v1.0.0/NayerControl-Windows.zip'
+    downloadUrl: 'https://github.com/nayereulate/NayerControl/releases/download/v1.0.0/NayerControl-Setup-1.0.0.exe'
   }
 ];
 
