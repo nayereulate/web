@@ -175,6 +175,7 @@
 .release-version{ font-family:'Press Start 2P', monospace; font-size:9px; color:var(--yellow); letter-spacing:.5px; }
 .release-card p{ font-size:18px; color:#c7c7e6; margin:0; line-height:1.5; }
 .release-meta{ font-size:14px; color:var(--muted); }
+.release-downloads{ display:flex; gap:16px; flex-wrap:wrap; margin-top:auto; }
 .release-card--add{ border-style:dashed; border-color:#5a5a86; box-shadow:none; align-items:center; justify-content:center; text-align:center; color:var(--muted); }
 .release-card--add:hover{ transform:none; }
 .release-card--add h3{ color:var(--muted); font-family:'Press Start 2P', monospace; font-size:11px; margin:8px 0; }
