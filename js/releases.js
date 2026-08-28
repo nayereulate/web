@@ -19,6 +19,16 @@
 // =========================================================================
 window.RELEASES = [
   {
+    app: 'DigitalBook',
+    version: 'v1.0.0',
+    date: '2026-08-27',
+    icon: '📓',
+    notes: 'Primera versión: app de notas para tablets con animación de página real, panel de lápiz/borrador y varios cuadernos.',
+    downloads: [
+      { label: '📱 Android', url: 'https://github.com/nayereulate/DigitalBook/releases/latest/download/DigitalBook.apk' }
+    ]
+  },
+  {
     app: 'NayerVR',
     version: 'v1.0.0',
     date: '2026-08-27',
