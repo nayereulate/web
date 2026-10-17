@@ -155,6 +155,43 @@ a{ color:inherit; }
   opacity:0;
 }
 
+/* ================= Icons (sprite in js/icons.js) ================= */
+.i{
+  width:1.15em;
+  height:1.15em;
+  flex-shrink:0;
+  vertical-align:-.2em;
+  overflow:visible;
+}
+.btn .i{ width:1.4em; height:1.4em; margin:-.2em 0; }
+
+/* Framed icon tile used on cards */
+.icon-tile{
+  --accent-c:var(--accent, var(--cyan));
+  position:relative;
+  display:inline-grid;
+  place-items:center;
+  width:52px;
+  height:52px;
+  color:var(--accent-c);
+  background:color-mix(in srgb, var(--accent-c) 10%, var(--bg-deep));
+  border:2px solid var(--accent-c);
+  box-shadow:0 0 14px color-mix(in srgb, var(--accent-c) 35%, transparent), inset 0 0 12px color-mix(in srgb, var(--accent-c) 18%, transparent);
+  flex-shrink:0;
+}
+.icon-tile .i{ width:26px; height:26px; filter:drop-shadow(0 0 4px color-mix(in srgb, var(--accent-c) 70%, transparent)); }
+/* pixel corner notches */
+.icon-tile::before, .icon-tile::after{
+  content:"";
+  position:absolute;
+  width:6px; height:6px;
+  background:var(--bg-deep);
+}
+.icon-tile::before{ top:-2px; left:-2px; }
+.icon-tile::after{ bottom:-2px; right:-2px; }
+.icon-tile--sm{ width:40px; height:40px; }
+.icon-tile--sm .i{ width:20px; height:20px; }
+
 /* ================= Typography ================= */
 .glitch{
   font-family:'Press Start 2P', monospace;

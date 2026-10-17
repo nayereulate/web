@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content Lab — Contenido, streams y colaboraciones | Nayer Studio</title>
+<meta name="description" content="Content Lab de Nayer Studio: edición de video corto, setup de stream, identidad visual retro, contenido tech para marcas y herramientas para creadores. Colaboraciones con una comunidad friki y tecnológica.">
+<meta name="theme-color" content="#09011a">
+<link rel="canonical" href="https://nayereulate.github.io/web/contenido.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nayer | Eulate">
+<meta property="og:title" content="Content Lab — Nayer Studio">
+<meta property="og:description" content="Edición de video, setups de stream, identidad visual retro y colaboraciones con marcas tech, gamer y otaku.">
+<meta property="og:url" content="https://nayereulate.github.io/web/contenido.html">
+<meta property="og:image" content="https://nayereulate.github.io/web/fotoPixel.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%230d0221%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%223%22%20height%3D%223%22%20fill%3D%22%2300f0ff%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%223%22%20width%3D%223%22%20height%3D%223%22%20fill%3D%22%23ff2bd6%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%2210%22%20width%3D%2210%22%20height%3D%223%22%20fill%3D%22%23ffe66d%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/ui.css">
+<link rel="stylesheet" href="css/studio.css">
+</head>
+<body>
+<script src="js/icons.js"></script>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<div id="bg"></div>
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="grid-floor" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">NAYER<span>|</span>EULATE</a>
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="topnav">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="topnav" id="topnav" aria-label="Principal">
+    <a href="landing.html">Sobre mí</a>
+    <a href="landing.html#creaciones">Proyectos</a>
+    <a href="servicios.html">Studio</a>
+    <a href="software.html">Software</a>
+    <a href="contenido.html" aria-current="page">Contenido</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <button class="cmdk-btn" type="button" data-cmdk aria-label="Abrir buscador del sitio"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg><span class="cmdk-btn__label">Buscar</span><kbd data-mod-key>Ctrl</kbd><kbd>K</kbd></button>
+  <a class="back-btn" href="contacto.html?servicio=contenido">COTIZAR ▶</a>
+</header>
+
+<main id="main">
+
+  <section class="hero page-hero">
+    <span class="kicker">NAYER STUDIO · DIVISIÓN 02</span>
+    <h1 class="glitch" data-text="CONTENT LAB">CONTENT&nbsp;LAB</h1>
+    <p class="hero-sub">Contenido friki y tecnológico hecho por alguien que sale al aire todas las semanas. Edición, streams, identidad visual y herramientas para creadores, más colaboraciones con marcas que encajan con la comunidad.</p>
+    <div class="hero-cta">
+      <a href="contacto.html?servicio=contenido" class="btn btn-solid"><svg class="i" aria-hidden="true"><use href="#i-video"/></svg> COTIZAR CONTENIDO</a>
+      <a href="#colabs" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-megaphone"/></svg> SOY UNA MARCA</a>
+    </div>
+  </section>
+
+  <section id="servicios" class="section">
+    <h2 class="section-title"><span class="tag">01</span> PARA CREADORES</h2>
+    <p class="section-lead">Lo que aprendí armando mi propio canal, ahora al servicio del tuyo.</p>
+
+    <div class="service-grid">
+      <article class="service-card accent-pink reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-scissors"/></svg></span>
+        <h3>Edición de video corto</h3>
+        <p>Clips verticales con ritmo, subtítulos y ganchos para que la gente no deslice.</p>
+        <ul>
+          <li>Shorts, Reels y TikToks</li>
+          <li>Clips sacados de tus streams</li>
+          <li>Subtítulos dinámicos</li>
+        </ul>
+        <div class="tags"><span>Vertical</span><span>9:16</span></div>
+      </article>
+
+      <article class="service-card accent-purple reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-mic"/></svg></span>
+        <h3>Setup de stream</h3>
+        <p>Tu canal listo para salir en vivo sin pelearte con la configuración.</p>
+        <ul>
+          <li>Escenas y fuentes en OBS</li>
+          <li>Alertas, overlays y pantallas de espera</li>
+          <li>Configuración de audio y calidad</li>
+        </ul>
+        <div class="tags"><span>OBS</span><span>Twitch</span><span>YouTube</span></div>
+      </article>
+
+      <article class="service-card accent-yellow reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-palette"/></svg></span>
+        <h3>Identidad retro / pixel</h3>
+        <p>La estética synthwave y pixel art de este sitio, aplicada a tu marca.</p>
+        <ul>
+          <li>Overlays y paneles de canal</li>
+          <li>Banners y miniaturas</li>
+          <li>Link-in-bio con tu estilo</li>
+        </ul>
+        <div class="tags"><span>Pixel art</span><span>Synthwave</span></div>
+      </article>
+
+      <article class="service-card accent-cyan reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg></span>
+        <h3>Herramientas para creadores</h3>
+        <p>Donde el Content Lab y el Software Lab se juntan: código pensado para tu canal.</p>
+        <ul>
+          <li>Bots de chat y comandos personalizados</li>
+          <li>Widgets y overlays interactivos</li>
+          <li>Automatizar subidas y clips</li>
+        </ul>
+        <div class="tags"><span>Bots</span><span>Widgets</span></div>
+      </article>
+
+      <article class="service-card accent-green reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></span>
+        <h3>Mentoría para empezar</h3>
+        <p>Sesiones para quien quiere crear contenido y no sabe por dónde empezar.</p>
+        <ul>
+          <li>Plataforma y formato que te conviene</li>
+          <li>Equipo mínimo con lo que ya tienes</li>
+          <li>Un flujo de trabajo que puedas sostener</li>
+        </ul>
+        <div class="tags"><span>Sesión 1:1</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="colabs" class="section">
+    <h2 class="section-title"><span class="tag">02</span> COLABS &amp; MARCAS</h2>
+    <p class="section-lead">Mi comunidad es tech, gamer y otaku. Si tu producto encaja ahí, lo mostramos de forma honesta y entretenida, sin sonar a comercial.</p>
+
+    <div class="levels-grid">
+      <article class="level-card tilt accent-cyan reveal">
+        <span class="level-num">FORMATO A</span>
+        <h3>MENCIÓN</h3>
+        <div class="level-hp" aria-hidden="true"><i></i><i class="off"></i><i class="off"></i></div>
+        <p class="level-for">Tu marca integrada dentro de un video o stream.</p>
+        <ul>
+          <li>Mención hablada en contenido regular</li>
+          <li>Enlace en la descripción o el chat</li>
+          <li>Ideal para dar a conocer un producto</li>
+        </ul>
+        <a href="contacto.html?servicio=colab" class="btn btn-outline">PROPONER</a>
+      </article>
+
+      <article class="level-card level-card--featured tilt accent-pink reveal">
+        <span class="level-flag">RECOMENDADO</span>
+        <span class="level-num">FORMATO B</span>
+        <h3>REVIEW / DEMO</h3>
+        <div class="level-hp" aria-hidden="true"><i></i><i></i><i class="off"></i></div>
+        <p class="level-for">Un video dedicado a probar tu producto o app.</p>
+        <ul>
+          <li>Prueba real con opinión honesta</li>
+          <li>Tutorial o demo paso a paso</li>
+          <li>Clips cortos para redes incluidos</li>
+        </ul>
+        <a href="contacto.html?servicio=colab" class="btn btn-solid">PROPONER</a>
+      </article>
+
+      <article class="level-card tilt accent-yellow reveal">
+        <span class="level-num">FORMATO C</span>
+        <h3>STREAM PATROCINADO</h3>
+        <div class="level-hp" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="level-for">Una transmisión en vivo con tu producto como protagonista.</p>
+        <ul>
+          <li>Uso del producto en directo</li>
+          <li>Interacción con el chat en tiempo real</li>
+          <li>Overlay con tu marca durante el stream</li>
+        </ul>
+        <a href="contacto.html?servicio=colab" class="btn btn-outline">PROPONER</a>
+      </article>
+    </div>
+    <p class="levels-note">¿Necesitas métricas actualizadas de audiencia? Pídeme el media kit al escribirme.</p>
+  </section>
+
+  <section id="plataformas" class="section">
+    <h2 class="section-title"><span class="tag">03</span> DÓNDE ESTOY</h2>
+    <p class="section-lead">Cada plataforma tiene su formato. Así reparto el contenido.</p>
+
+    <div class="platform-grid">
+      <a class="platform reveal" style="--accent:#ff5c7a" href="https://www.youtube.com/@nayerdev" target="_blank" rel="noopener">
+        <strong>YOUTUBE</strong>
+        <span>Videos de proyectos, tutoriales y procesos.</span>
+      </a>
+      <a class="platform reveal" style="--accent:#c9a8ff" href="https://www.twitch.tv/nayer_eulate_m" target="_blank" rel="noopener">
+        <strong>TWITCH</strong>
+        <span>Directos de código, gaming y charla.</span>
+      </a>
+      <a class="platform reveal" style="--accent:var(--cyan)" href="https://www.tiktok.com/@nayer.dev" target="_blank" rel="noopener">
+        <strong>TIKTOK</strong>
+        <span>Clips cortos, tips y momentos de stream.</span>
+      </a>
+      <a class="platform reveal" style="--accent:var(--pink)" href="https://www.instagram.com/nayer_eulate/" target="_blank" rel="noopener">
+        <strong>INSTAGRAM</strong>
+        <span>Reels y el día a día detrás del canal.</span>
+      </a>
+      <a class="platform reveal" style="--accent:var(--purple)" href="https://discord.gg/3p7HU2fUN" target="_blank" rel="noopener">
+        <strong>DISCORD</strong>
+        <span>La comunidad: dudas, proyectos y avisos.</span>
+      </a>
+      <a class="platform reveal" style="--accent:var(--green)" href="https://github.com/nayereulate" target="_blank" rel="noopener">
+        <strong>GITHUB</strong>
+        <span>El código de todo lo que muestro en pantalla.</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <h2 class="section-title"><span class="tag">04</span> FAQ CONTENIDO</h2>
+    <p class="section-lead">Lo que suelen preguntar creadores y marcas.</p>
+
+    <div class="faq">
+      <details>
+        <summary>¿Necesito tener un canal grande para contratarte?</summary>
+        <p>No. Muchas veces el mejor momento para ordenar tu stream o tu edición es al empezar, cuando todavía es fácil cambiar cosas.</p>
+      </details>
+      <details>
+        <summary>¿Cómo te envío el material para editar?</summary>
+        <p>Por un enlace de Drive, Mega o similar. Acordamos formato, duración y estilo antes de empezar para que la primera versión ya se acerque a lo que quieres.</p>
+      </details>
+      <details>
+        <summary>¿Aceptas cualquier marca?</summary>
+        <p>Solo colaboraciones que tengan sentido para mi comunidad (tecnología, gaming, anime, productividad). Si no encaja, te lo digo con honestidad.</p>
+      </details>
+      <details>
+        <summary>¿Puedo revisar el video antes de que se publique?</summary>
+        <p>Sí. En reviews y menciones compartimos una versión previa para verificar datos del producto. La opinión sigue siendo mía y honesta.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cta-band reveal">
+      <h2>HAGAMOS ALGO QUE SE <span class="hl-pink">VEA BIEN</span></h2>
+      <p>Seas creador o marca, cuéntame qué tienes en mente y lo aterrizamos en un plan concreto.</p>
+      <div class="hero-cta">
+        <a href="contacto.html?servicio=contenido" class="btn btn-solid"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg> ENVIAR BRIEF</a>
+        <a href="software.html" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-save"/></svg> VER SOFTWARE LAB</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <button class="fx-toggle" type="button" data-fx-toggle aria-pressed="true"><svg class="i" aria-hidden="true"><use href="#i-sliders"/></svg><span data-fx-label>EFECTOS: ON</span></button>
+  <nav class="footer-nav" aria-label="Pie de página">
+    <a href="index.html">Mis links</a>
+    <a href="landing.html">Sobre mí</a>
+    <a href="servicios.html">Studio</a>
+    <a href="software.html">Software</a>
+    <a href="contenido.html">Contenido</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="https://github.com/nayereulate" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <p>PRESS START © 2026 · Nayer | Eulate · Nayer Studio · hecho con <svg class="i" aria-hidden="true"><use href="#i-palette"/></svg> pixel power</p>
+</footer>
+
+<button class="back-to-top" id="backTop" type="button" title="Volver arriba" aria-label="Volver arriba">▲</button>
+
+<script src="js/background.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/site.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>

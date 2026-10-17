@@ -1,5 +1,6 @@
 // ===== Shared micro-interactions: tilt cards, magnetic buttons, ripple, cursor glow, reveal =====
 (function () {
+  document.documentElement.classList.remove('no-js');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ----- Cursor glow that follows the pointer -----
@@ -14,15 +15,15 @@
   }
 
   // ----- 3D tilt + spotlight on cards -----
-  const tiltEls = document.querySelectorAll('.pillar-card, .project-card, .service-card, .release-card, .social-btn');
+  const TILT = '.pillar-card, .project-card, .service-card, .release-card, .tilt';
+  const tiltEls = document.querySelectorAll(TILT + ', .social-btn');
   if (!reduced) {
     tiltEls.forEach((el) => {
       el.addEventListener('pointermove', (e) => {
         const rect = el.getBoundingClientRect();
         const px = (e.clientX - rect.left) / rect.width;
         const py = (e.clientY - rect.top) / rect.height;
-        const isTiltable = el.classList.contains('pillar-card') || el.classList.contains('project-card') || el.classList.contains('service-card') || el.classList.contains('release-card');
-        if (isTiltable) {
+        if (el.matches(TILT)) {
           el.style.setProperty('--ry', ((px - 0.5) * 10).toFixed(2) + 'deg');
           el.style.setProperty('--rx', ((0.5 - py) * 10).toFixed(2) + 'deg');
         }
@@ -90,8 +91,11 @@
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            observer.unobserve(entry.target);
+            const el = entry.target;
+            el.classList.add('in-view');
+            // drop the stagger delay once revealed so hover tilt stays snappy
+            setTimeout(() => { el.style.transitionDelay = ''; }, 700 + (parseInt(el.style.transitionDelay, 10) || 0));
+            observer.unobserve(el);
           }
         });
       }, { threshold: 0.15 });

@@ -1,0 +1,173 @@
+/* =========================================================================
+   NAYER | EULATE — Global UI (js/ui.js): command palette, toasts,
+   effects toggle, light mode, konami easter egg
+   ========================================================================= */
+
+/* ===== Skip link ===== */
+.skip-link{
+  position:absolute;
+  left:12px; top:-60px;
+  z-index:100;
+  padding:10px 14px;
+  background:var(--yellow);
+  color:var(--bg-deep);
+  font-family:'Press Start 2P', monospace;
+  font-size:10px;
+  text-decoration:none;
+  transition:top .2s var(--ease-out);
+}
+.skip-link:focus{ top:12px; }
+
+/* ===== Live indicator ===== */
+.live-dot{
+  display:inline-block;
+  width:8px; height:8px;
+  background:var(--green);
+  box-shadow:0 0 8px var(--green);
+  animation:pulse 1.4s ease-in-out infinite;
+  flex-shrink:0;
+}
+
+kbd{
+  display:inline-block;
+  min-width:1.6em;
+  padding:1px 5px;
+  font-family:'VT323', monospace;
+  font-size:15px;
+  line-height:1.2;
+  text-align:center;
+  color:var(--text);
+  background:var(--bg-deep);
+  border:1px solid #3b2a5c;
+  border-bottom-width:3px;
+}
+
+/* ===== Palette trigger button (topbar / index) ===== */
+.cmdk-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 8px 6px 10px;
+  background:rgba(9,1,26,.6);
+  border:2px solid #3b2a5c;
+  color:var(--muted);
+  font-family:'VT323', monospace;
+  font-size:17px;
+  cursor:pointer;
+  transition:border-color .2s ease, color .2s ease;
+}
+.cmdk-btn:hover, .cmdk-btn:focus-visible{ border-color:var(--cyan); color:var(--text); }
+.cmdk-btn .i{ color:var(--cyan); }
+.cmdk-btn kbd{ font-size:13px; }
+
+/* ===== Palette ===== */
+.cmdk{ position:fixed; inset:0; z-index:200; display:flex; justify-content:center; align-items:flex-start; padding:12vh 16px 16px; }
+.cmdk[hidden]{ display:none; }
+.cmdk__backdrop{ position:absolute; inset:0; background:rgba(5,0,15,.72); -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); opacity:0; transition:opacity .2s ease; }
+.cmdk__panel{
+  position:relative;
+  width:min(620px, 100%);
+  max-height:70vh;
+  display:flex;
+  flex-direction:column;
+  background:var(--bg-mid);
+  border:3px solid var(--cyan);
+  box-shadow:8px 8px 0 0 var(--pink), 0 0 60px rgba(0,240,255,.25);
+  transform:translateY(-12px) scale(.98);
+  opacity:0;
+  transition:transform .2s var(--ease-out), opacity .2s ease;
+}
+.cmdk.show .cmdk__backdrop{ opacity:1; }
+.cmdk.show .cmdk__panel{ transform:none; opacity:1; }
+.cmdk__search{ display:flex; align-items:center; gap:12px; padding:14px 16px; border-bottom:2px solid #3b2a5c; }
+.cmdk__search > .i{ color:var(--cyan); width:22px; height:22px; }
+.cmdk__input{ flex:1; min-width:0; background:transparent; border:0; outline:none; color:var(--text); font-family:'VT323', monospace; font-size:22px; }
+.cmdk__input::placeholder{ color:#6f6f9a; }
+.cmdk__list{ list-style:none; margin:0; padding:8px; overflow-y:auto; }
+.cmdk__group{ font-family:'Press Start 2P', monospace; font-size:8px; letter-spacing:2px; color:var(--yellow); padding:12px 10px 6px; }
+.cmdk__item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:9px 10px;
+  font-size:19px;
+  color:#dfe6ff;
+  cursor:pointer;
+  border-left:3px solid transparent;
+}
+.cmdk__item .i{ color:var(--muted); width:20px; height:20px; }
+.cmdk__item span{ flex:1; }
+.cmdk__item.is-active{ background:rgba(0,240,255,.1); border-left-color:var(--cyan); color:var(--text); }
+.cmdk__item.is-active .i{ color:var(--cyan); }
+.cmdk__ext{ opacity:.6; width:14px !important; height:14px !important; }
+.cmdk__empty{ padding:18px 10px; color:var(--muted); font-size:18px; }
+.cmdk__foot{ display:flex; gap:18px; flex-wrap:wrap; padding:10px 16px; border-top:2px solid #3b2a5c; font-size:15px; color:var(--muted); }
+.cmdk__foot kbd{ margin-right:3px; font-size:13px; }
+body.cmdk-open{ overflow:hidden; }
+
+/* ===== Toasts ===== */
+.toasts{ position:fixed; left:50%; bottom:24px; transform:translateX(-50%); z-index:210; display:flex; flex-direction:column; align-items:center; gap:10px; pointer-events:none; }
+.toast{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 16px;
+  background:var(--bg-deep);
+  border:2px solid var(--green);
+  box-shadow:4px 4px 0 0 var(--green);
+  color:var(--text);
+  font-size:19px;
+  transform:translateY(16px);
+  opacity:0;
+  transition:transform .25s var(--ease-out), opacity .25s ease;
+}
+.toast .i{ color:var(--green); }
+.toast.show{ transform:none; opacity:1; }
+
+/* ===== Effects toggle (footer) ===== */
+.fx-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:0 0 14px;
+  padding:6px 10px;
+  background:transparent;
+  border:2px solid #3b2a5c;
+  color:var(--muted);
+  font-family:'Press Start 2P', monospace;
+  font-size:8px;
+  letter-spacing:1px;
+  cursor:pointer;
+  transition:border-color .2s ease, color .2s ease;
+}
+.fx-toggle:hover{ border-color:var(--cyan); color:var(--cyan); }
+.fx-toggle[aria-pressed="true"] .i{ color:var(--green); }
+
+/* ===== Light mode: heavy visual layers off ===== */
+.fx-off .scanlines, .fx-off .cursor-glow, .fx-off .aurora, .fx-off .float-layer, .fx-off .beam, .fx-off .spotlight{ display:none !important; }
+.fx-off .grid-floor{ animation:none; opacity:.35; }
+.fx-off .glitch::before, .fx-off .glitch::after{ display:none; }
+.fx-off .avatar-frame, .fx-off .status-dot, .fx-off .sun, .fx-off .donate-tab, .fx-off .qr-frame::after, .fx-off .marquee__track{ animation:none !important; }
+
+/* ===== Konami: god mode ===== */
+.god-mode .aurora{ animation:godHue 1.2s linear infinite !important; opacity:.9; }
+.god-mode .glitch{ animation:godHueText 1s linear infinite; }
+@keyframes godHue{
+  from{ filter:blur(70px) saturate(2) hue-rotate(0deg); }
+  to{ filter:blur(70px) saturate(2) hue-rotate(360deg); }
+}
+@keyframes godHueText{
+  from{ filter:hue-rotate(0deg); }
+  to{ filter:hue-rotate(360deg); }
+}
+.pixel-rain{ position:fixed; inset:0; z-index:190; pointer-events:none; overflow:hidden; }
+.pixel-rain i{ position:absolute; top:-12px; animation:pixelFall linear forwards; }
+@keyframes pixelFall{
+  to{ transform:translateY(110vh) rotate(180deg); }
+}
+
+@media (max-width:600px){
+  .cmdk{ padding-top:8vh; }
+  .cmdk__foot{ display:none; }
+  .cmdk-btn kbd, .cmdk-btn .cmdk-btn__label{ display:none; }
+}

@@ -1,50 +1,66 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Nayer | Eulate — Dev friki, estudiante y creador de herramientas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobre mí y proyectos — Nayer | Eulate</title>
 <meta name="description" content="Nayer | Eulate — Estudiante de Ingeniería Informática, streamer y dev friki. Construyo herramientas por curiosidad, comparto releases en GitHub y documento todo el proceso en vivo.">
+<meta name="theme-color" content="#09011a">
+<link rel="canonical" href="https://nayereulate.github.io/web/landing.html">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Nayer | Eulate">
+<meta property="og:title" content="Nayer | Eulate — Dev friki, estudiante y creador de contenido">
+<meta property="og:description" content="Estudiante de Ingeniería Informática, streamer y dev friki. Mis herramientas, releases y Nayer Studio.">
+<meta property="og:url" content="https://nayereulate.github.io/web/landing.html">
+<meta property="og:image" content="https://nayereulate.github.io/web/fotoPixel.jpg">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%230d0221%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%223%22%20height%3D%223%22%20fill%3D%22%2300f0ff%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%223%22%20width%3D%223%22%20height%3D%223%22%20fill%3D%22%23ff2bd6%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%2210%22%20width%3D%2210%22%20height%3D%223%22%20fill%3D%22%23ffe66d%22%2F%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/ui.css">
+<link rel="stylesheet" href="css/studio.css">
 <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
+<script src="js/icons.js"></script>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
 
 <div id="bg"></div>
-<div class="aurora"><span></span><span></span><span></span></div>
-<canvas id="bg-canvas"></canvas>
-<div class="grid-floor"></div>
-<div class="scanlines"></div>
-<div class="vignette"></div>
-<div class="cursor-glow"></div>
-<div class="scroll-progress" id="scrollProgress"></div>
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="grid-floor" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <header class="topbar">
   <a class="brand" href="index.html">NAYER<span>|</span>EULATE</a>
   <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="topnav">
     <span></span><span></span><span></span>
   </button>
-  <nav class="topnav" id="topnav">
-    <a href="#sobre-nayer">Sobre mí</a>
-    <a href="#creaciones">Creaciones</a>
-    <a href="#releases">Releases</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#donaciones" class="donate-trigger">Donar</a>
-    <a href="#contacto">Contacto</a>
+  <nav class="topnav" id="topnav" aria-label="Principal">
+    <a href="landing.html" aria-current="page">Sobre mí</a>
+    <a href="#creaciones">Proyectos</a>
+    <a href="servicios.html">Studio</a>
+    <a href="software.html">Software</a>
+    <a href="contenido.html">Contenido</a>
+    <a href="contacto.html">Contacto</a>
   </nav>
-  <a class="back-btn" href="index.html">← Mis links</a>
+  <button class="cmdk-btn" type="button" data-cmdk aria-label="Abrir buscador del sitio"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg><span class="cmdk-btn__label">Buscar</span><kbd data-mod-key>Ctrl</kbd><kbd>K</kbd></button>
+  <a class="back-btn" href="contacto.html">COTIZAR ▶</a>
 </header>
 
-<main>
+<main id="main">
 
   <section class="hero">
     <div class="hero-avatar avatar-frame reveal">
       <img src="fotoPixel.jpg" alt="Avatar pixel-art de Nayer Eulate">
-      <span class="status-dot" title="En vivo ahora"></span>
+      <span class="status-dot" title="Disponible para proyectos"></span>
     </div>
     <div class="badges">
       <span class="badge badge-cyan">STUDENT</span>
@@ -52,12 +68,12 @@
       <span class="badge badge-yellow">FRIKI</span>
     </div>
     <h1 class="glitch" data-text="NAYER | EULATE">NAYER&nbsp;|&nbsp;EULATE</h1>
-    <p class="hero-sub">Estudiante de Ingeniería Informática que construye herramientas por pura curiosidad friki. Código, gaming y anime de fondo, todo el tiempo 🎮👾</p>
+    <p class="hero-sub">Estudiante de Ingeniería Informática que construye herramientas por pura curiosidad friki. Código, gaming y anime de fondo, todo el tiempo</p>
     <div class="hero-cta">
-      <a href="#creaciones" class="btn btn-solid">🕹️ VER MIS CREACIONES</a>
-      <a href="#servicios" class="btn btn-outline">💼 COLABOREMOS</a>
-      <a href="#releases" class="btn btn-outline">📦 RELEASES</a>
-      <a href="#donaciones" class="btn btn-outline donate-trigger">💖 APOYAR</a>
+      <a href="#creaciones" class="btn btn-solid"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg> VER MIS CREACIONES</a>
+      <a href="servicios.html" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg> NAYER STUDIO</a>
+      <a href="#releases" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-package"/></svg> RELEASES</a>
+      <a href="#donatePanel" class="btn btn-outline donate-trigger"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg> APOYAR</a>
     </div>
   </section>
 
@@ -80,28 +96,29 @@
         que construye herramientas porque disfruta resolver problemas reales, ya sea un script de cinco
         minutos o una app completa. Cada proyecto es una excusa para aprender algo nuevo.</p>
 
-        <p>El creacion de contenido no es solo entretenimiento para mí — es donde documento el proceso. </p>
-        
+        <p>La creación de contenido no es solo entretenimiento para mí: es donde documento el proceso.
+        De esa mezcla nació <strong>Nayer Studio</strong>, mi estudio independiente para construir software
+        y contenido para otras personas.</p>
       </div>
 
       <div class="pillars">
         <div class="pillar-card reveal">
-          <span class="pillar-icon">🛠️</span>
+          <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg></span>
           <h3>Creo herramientas</h3>
           <p>Scripts, apps y utilidades que nacen de un problema real y terminan siendo útiles para más gente.</p>
         </div>
         <div class="pillar-card reveal">
-          <span class="pillar-icon">🎓</span>
+          <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg></span>
           <h3>Estudiante de INF</h3>
           <p>Ingeniería Informática en la UMSS. Aprendiendo en clase y rompiendo cosas por mi cuenta fuera de ella.</p>
         </div>
         <div class="pillar-card reveal">
-          <span class="pillar-icon">📡</span>
+          <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-broadcast"/></svg></span>
           <h3>Proceso en público</h3>
           <p>Comparto el camino de aprender y mis pasatiempos friki, con mi comunidad, sin filtro.</p>
         </div>
         <div class="pillar-card reveal">
-          <span class="pillar-icon">🎌</span>
+          <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-gamepad"/></svg></span>
           <h3>Otaku & Gamer</h3>
           <p>Anime y videojuegos de fondo siempre — de ahí sale buena parte de la inspiración para lo que construyo.</p>
         </div>
@@ -113,10 +130,18 @@
     <h2 class="section-title"><span class="tag">02</span> MIS CREACIONES</h2>
     <p class="section-lead">Herramientas que construyo por curiosidad friki — de la idea al ejecutable, aprendiendo en el camino.</p>
 
-    <div class="projects-grid">
-      <article class="project-card reveal">
+    <div class="filter-bar" role="group" aria-label="Filtrar proyectos" data-filter-target="#projectsGrid">
+      <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">Todos</button>
+      <button class="filter-btn" type="button" data-filter="windows"><svg class="i" aria-hidden="true"><use href="#i-windows"/></svg>Windows</button>
+      <button class="filter-btn" type="button" data-filter="android"><svg class="i" aria-hidden="true"><use href="#i-android"/></svg>Android</button>
+      <button class="filter-btn" type="button" data-filter="python"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg>Python</button>
+      <button class="filter-btn" type="button" data-filter="kotlin"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg>Kotlin</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <article class="project-card reveal" data-repo="NayerControl" data-tags="windows python">
         <div class="project-head">
-          <span class="project-icon">📱</span>
+          <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span>
           <h3>NayerControl</h3>
         </div>
         <p>Aplicación de escritorio para Windows que controla un celular Android por USB & WIFI.
@@ -124,12 +149,12 @@
         <div class="tags">
           <span>Python</span><span>PySide6</span><span>Desktop</span>
         </div>
-        <a href="https://github.com/nayereulate/NayerControl" class="project-link" target="_blank" rel="noopener">Ver proyecto ▶</a>
+        <a href="https://github.com/nayereulate/NayerControl" class="project-link" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg> Ver en GitHub <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       </article>
 
-      <article class="project-card reveal">
+      <article class="project-card reveal" data-repo="NayerVR" data-tags="windows android python kotlin">
         <div class="project-head">
-          <span class="project-icon">🥽</span>
+          <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-vr"/></svg></span>
           <h3>NayerVR</h3>
         </div>
         <p>Mirror del monitor de tu PC a un celular Android por USB/WiFi para usarlo dentro de una
@@ -137,12 +162,12 @@
         <div class="tags">
           <span>Python</span><span>Kotlin</span><span>ffmpeg</span>
         </div>
-        <a href="https://github.com/nayereulate/NayerVR" class="project-link" target="_blank" rel="noopener">Ver proyecto ▶</a>
+        <a href="https://github.com/nayereulate/NayerVR" class="project-link" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg> Ver en GitHub <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       </article>
 
-      <article class="project-card reveal">
+      <article class="project-card reveal" data-repo="DigitalBook" data-tags="android kotlin">
         <div class="project-head">
-          <span class="project-icon">📓</span>
+          <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-book"/></svg></span>
           <h3>DigitalBook</h3>
         </div>
         <p>App de notas para tablets Android: página en blanco, deslizar para pasar hoja con una
@@ -150,11 +175,11 @@
         <div class="tags">
           <span>Kotlin</span><span>Jetpack Compose</span><span>Android</span>
         </div>
-        <a href="https://github.com/nayereulate/DigitalBook" class="project-link" target="_blank" rel="noopener">Ver proyecto ▶</a>
+        <a href="https://github.com/nayereulate/DigitalBook" class="project-link" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg> Ver en GitHub <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       </article>
 
       <article class="project-card project-card--add reveal">
-        <span class="project-icon">➕</span>
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></span>
         <h3>Aquí se subirán mis próximos proyectos</h3>
       </article>
     </div>
@@ -166,7 +191,7 @@
 
     <div class="releases-grid" id="releasesGrid">
       <article class="release-card release-card--add reveal">
-        <span class="release-icon">➕</span>
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></span>
         <h3>Próximo release</h3>
         <p>Cuando publique una nueva versión de alguna app, su enlace al release de GitHub aparecerá aquí.</p>
       </article>
@@ -174,55 +199,65 @@
   </section>
 
   <section id="servicios" class="section">
-    <h2 class="section-title"><span class="tag">04</span> EN QUÉ TE PUEDO AYUDAR</h2>
-    <p class="section-lead">Si necesitas una herramienta que no existe, la puedo construir contigo — con la misma seriedad de siempre, aunque todavía sea estudiante.</p>
+    <h2 class="section-title"><span class="tag">04</span> NAYER STUDIO</h2>
+    <p class="section-lead">Lo que construyo para mí, ahora también para ti. Mi estudio independiente tiene dos divisiones:</p>
 
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <span class="service-icon">🌐</span>
-        <h3>Desarrollo web</h3>
-        <p>Sitios, landing pages y paneles a medida, simples y sin relleno innecesario.</p>
-      </div>
-      <div class="service-card reveal">
-        <span class="service-icon">🖥️</span>
-        <h3>Apps de escritorio</h3>
-        <p>Herramientas para automatizar esas tareas manuales que nadie quiere hacer a mano.</p>
-      </div>
-      <div class="service-card reveal">
-        <span class="service-icon">🧭</span>
-        <h3>Consultoría técnica</h3>
-        <p>Una segunda opinión honesta sobre tu idea o tu stack antes de que se vuelva un dolor de cabeza.</p>
-      </div>
+    <div class="division-grid">
+      <a class="division-card tilt accent-cyan reveal" href="software.html">
+        <span class="division-label">DIVISIÓN 01</span>
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-save"/></svg></span>
+        <h3>SOFTWARE LAB</h3>
+        <p>Webs, apps de escritorio, apps Android, automatizaciones y bots a medida.</p>
+        <span class="division-go">ENTRAR ▶</span>
+      </a>
+      <a class="division-card tilt accent-pink reveal" href="contenido.html">
+        <span class="division-label">DIVISIÓN 02</span>
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-video"/></svg></span>
+        <h3>CONTENT LAB</h3>
+        <p>Edición de video, setups de stream, identidad visual retro y colaboraciones con marcas.</p>
+        <span class="division-go">ENTRAR ▶</span>
+      </a>
     </div>
 
-    <div class="services-cta">
-      <a href="#contacto" class="btn btn-solid">ARMEMOS ALGO JUNTOS</a>
+    <div class="section-cta">
+      <a href="servicios.html" class="btn btn-solid"><svg class="i" aria-hidden="true"><use href="#i-map"/></svg> CONOCER EL STUDIO</a>
     </div>
   </section>
 
   <section id="contacto" class="section section-contact">
     <h2 class="section-title"><span class="tag">05</span> CONTACTO</h2>
     <p class="section-lead">¿Tienes un proyecto en mente, una herramienta que te gustaría que exista, o solo quieres saludar?</p>
-    <a class="btn btn-solid btn-big" href="https://wa.me/59168518643" target="_blank" rel="noopener">💬 ESCRÍBEME</a>
-    <a class="btn btn-outline" href="index.html">🕹️ VER TODOS MIS LINKS</a>
+    <a class="btn btn-solid btn-big" href="contacto.html"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg> ENVIAR BRIEF</a>
+    <a class="btn btn-outline" href="https://wa.me/59168518643" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg> WHATSAPP</a>
+    <a class="btn btn-outline" href="index.html"><svg class="i" aria-hidden="true"><use href="#i-link"/></svg> TODOS MIS LINKS</a>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <p>PRESS START © 2026 · Nayer | Eulate · hecho con 👾 pixel power</p>
+  <button class="fx-toggle" type="button" data-fx-toggle aria-pressed="true"><svg class="i" aria-hidden="true"><use href="#i-sliders"/></svg><span data-fx-label>EFECTOS: ON</span></button>
+  <nav class="footer-nav" aria-label="Pie de página">
+    <a href="index.html">Mis links</a>
+    <a href="landing.html">Sobre mí</a>
+    <a href="servicios.html">Studio</a>
+    <a href="software.html">Software</a>
+    <a href="contenido.html">Contenido</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="https://github.com/nayereulate" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <p>PRESS START © 2026 · Nayer | Eulate · Nayer Studio · hecho con <svg class="i" aria-hidden="true"><use href="#i-invader"/></svg> pixel power</p>
 </footer>
 
 <!-- Widget de donaciones: flotante a la derecha, siempre visible -->
 <button class="donate-tab" id="donateTab" type="button" aria-label="Donar" aria-expanded="false" aria-controls="donatePanel">
-  <span class="donate-tab__icon">💖</span>
+  <svg class="i" aria-hidden="true"><use href="#i-heart"/></svg>
   <span class="donate-tab__label">DONAR</span>
 </button>
 
 <aside class="donate-panel" id="donatePanel" aria-hidden="true">
-  <button class="donate-panel__close" id="donateClose" type="button" aria-label="Cerrar donaciones">✕</button>
+  <button class="donate-panel__close" id="donateClose" type="button" aria-label="Cerrar donaciones"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
   <h3>APOYA LOS PROYECTOS</h3>
-  <p>Cada donación ayuda a conseguir futuras licencias para que siga creando herramientas y contenido mientras estudio. ¡Gracias! 🤩</p>
+  <p>Cada donación ayuda a conseguir futuras licencias para que siga creando herramientas y contenido mientras estudio. ¡Gracias!</p>
 
   <div class="qr-frame">
     <img src="QRdonaciones.jpeg" alt="Código QR para donaciones">
@@ -236,8 +271,10 @@
 <button class="back-to-top" id="backTop" type="button" title="Volver arriba" aria-label="Volver arriba">▲</button>
 
 <script src="js/background.js"></script>
+<script src="js/github.js"></script>
 <script src="js/releases.js"></script>
 <script src="js/effects.js"></script>
-<script src="js/landing.js"></script>
+<script src="js/site.js"></script>
+<script src="js/ui.js"></script>
 </body>
 </html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Software Lab — Webs, apps y automatizaciones | Nayer Studio</title>
+<meta name="description" content="Software Lab de Nayer Studio: desarrollo web, apps de escritorio para Windows, apps Android, automatizaciones, bots e integraciones. Precio cerrado, demos tempranas y código fuente incluido.">
+<meta name="theme-color" content="#09011a">
+<link rel="canonical" href="https://nayereulate.github.io/web/software.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nayer | Eulate">
+<meta property="og:title" content="Software Lab — Nayer Studio">
+<meta property="og:description" content="Webs, apps de escritorio y Android, automatizaciones y bots a medida.">
+<meta property="og:url" content="https://nayereulate.github.io/web/software.html">
+<meta property="og:image" content="https://nayereulate.github.io/web/fotoPixel.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%230d0221%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%223%22%20height%3D%223%22%20fill%3D%22%2300f0ff%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%223%22%20width%3D%223%22%20height%3D%223%22%20fill%3D%22%23ff2bd6%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%2210%22%20width%3D%2210%22%20height%3D%223%22%20fill%3D%22%23ffe66d%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/ui.css">
+<link rel="stylesheet" href="css/studio.css">
+</head>
+<body>
+<script src="js/icons.js"></script>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<div id="bg"></div>
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="grid-floor" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">NAYER<span>|</span>EULATE</a>
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="topnav">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="topnav" id="topnav" aria-label="Principal">
+    <a href="landing.html">Sobre mí</a>
+    <a href="landing.html#creaciones">Proyectos</a>
+    <a href="servicios.html">Studio</a>
+    <a href="software.html" aria-current="page">Software</a>
+    <a href="contenido.html">Contenido</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <button class="cmdk-btn" type="button" data-cmdk aria-label="Abrir buscador del sitio"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg><span class="cmdk-btn__label">Buscar</span><kbd data-mod-key>Ctrl</kbd><kbd>K</kbd></button>
+  <a class="back-btn" href="contacto.html?servicio=software">COTIZAR ▶</a>
+</header>
+
+<main id="main">
+
+  <section class="hero page-hero">
+    <span class="kicker">NAYER STUDIO · DIVISIÓN 01</span>
+    <h1 class="glitch" data-text="SOFTWARE LAB">SOFTWARE&nbsp;LAB</h1>
+    <p class="hero-sub">Herramientas a medida para personas, creadores y pequeños negocios. Webs, apps de escritorio, apps Android y automatizaciones: del problema real al ejecutable.</p>
+    <div class="hero-cta">
+      <a href="contacto.html?servicio=software" class="btn btn-solid"><svg class="i" aria-hidden="true"><use href="#i-save"/></svg> COTIZAR SOFTWARE</a>
+      <a href="#estimador" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-calculator"/></svg> ESTIMAR MI PROYECTO</a>
+    </div>
+  </section>
+
+  <section id="que-construyo" class="section">
+    <h2 class="section-title"><span class="tag">01</span> QUÉ CONSTRUYO</h2>
+    <p class="section-lead">Si es una tarea que repites, un proceso que se rompe o una idea que no existe todavía, probablemente se puede programar.</p>
+
+    <div class="service-grid">
+      <article class="service-card accent-cyan reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg></span>
+        <h3>Webs &amp; landing pages</h3>
+        <p>Sitios rápidos, responsive y sin relleno, listos para compartir.</p>
+        <ul>
+          <li>Portafolios y link-in-bio</li>
+          <li>Landing pages de producto</li>
+          <li>Publicación en GitHub Pages u hosting</li>
+        </ul>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+      </article>
+
+      <article class="service-card accent-pink reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-monitor"/></svg></span>
+        <h3>Apps de escritorio</h3>
+        <p>Programas para Windows con interfaz gráfica e instalador propio.</p>
+        <ul>
+          <li>Interfaces sobre herramientas de consola</li>
+          <li>Utilidades internas para tu equipo</li>
+          <li>Instalador .exe listo para distribuir</li>
+        </ul>
+        <div class="tags"><span>Python</span><span>PySide6</span></div>
+      </article>
+
+      <article class="service-card accent-green reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span>
+        <h3>Apps Android</h3>
+        <p>Apps nativas, modernas y pensadas para el uso real en celular o tablet.</p>
+        <ul>
+          <li>Interfaces con Jetpack Compose</li>
+          <li>Apps que se comunican con tu PC</li>
+          <li>APK firmado para instalar o publicar</li>
+        </ul>
+        <div class="tags"><span>Kotlin</span><span>Compose</span></div>
+      </article>
+
+      <article class="service-card accent-yellow reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-flow"/></svg></span>
+        <h3>Automatización &amp; scripts</h3>
+        <p>Esas tareas manuales que nadie quiere hacer, resueltas con un clic.</p>
+        <ul>
+          <li>Procesar archivos, video y audio en lote</li>
+          <li>Renombrar, ordenar y convertir datos</li>
+          <li>Tareas programadas</li>
+        </ul>
+        <div class="tags"><span>Python</span><span>ffmpeg</span></div>
+      </article>
+
+      <article class="service-card accent-purple reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-bot"/></svg></span>
+        <h3>Bots &amp; integraciones</h3>
+        <p>Conecto servicios entre sí para que trabajen por ti.</p>
+        <ul>
+          <li>Bots para Discord y chat de stream</li>
+          <li>Integración con APIs de terceros</li>
+          <li>Comandos de voz y control remoto</li>
+        </ul>
+        <div class="tags"><span>APIs</span><span>Webhooks</span></div>
+      </article>
+
+      <article class="service-card accent-cyan reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-compass"/></svg></span>
+        <h3>Consultoría técnica</h3>
+        <p>Una segunda opinión honesta antes de que tu idea se vuelva un dolor de cabeza.</p>
+        <ul>
+          <li>Revisión de idea y alcance</li>
+          <li>Elección de stack y herramientas</li>
+          <li>Plan por fases (MVP primero)</li>
+        </ul>
+        <div class="tags"><span>Sesión 1:1</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="estimador" class="section">
+    <h2 class="section-title"><span class="tag">02</span> ESTIMADOR DE PROYECTO</h2>
+    <p class="section-lead">Arma tu proyecto en 30 segundos y mira en qué nivel cae y cuánto tiempo tomaría aproximadamente.</p>
+
+    <div class="estimator">
+      <form class="estimator__form" id="estimator" novalidate>
+        <fieldset class="field">
+          <legend>1 · ¿QUÉ QUIERES CONSTRUIR?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="tipo" value="web" checked><span><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg> Web</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="desktop"><span><svg class="i" aria-hidden="true"><use href="#i-monitor"/></svg> App de escritorio</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="android"><span><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg> App Android</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="script"><span><svg class="i" aria-hidden="true"><use href="#i-flow"/></svg> Automatización</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="bot"><span><svg class="i" aria-hidden="true"><use href="#i-bot"/></svg> Bot / integración</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="est-screens">2 · PANTALLAS O SECCIONES: <output id="est-screens-out" for="est-screens">3</output></label>
+          <input type="range" id="est-screens" name="pantallas" min="1" max="12" value="3" class="pixel-range">
+        </div>
+
+        <fieldset class="field">
+          <legend>3 · EXTRAS</legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="extra" value="login"><span><svg class="i" aria-hidden="true"><use href="#i-key"/></svg> Usuarios / login</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="db"><span><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg> Base de datos</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="api"><span><svg class="i" aria-hidden="true"><use href="#i-link"/></svg> Integración con APIs</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="admin"><span><svg class="i" aria-hidden="true"><use href="#i-sliders"/></svg> Panel de administración</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="multi"><span><svg class="i" aria-hidden="true"><use href="#i-monitor"/></svg> Varias plataformas</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="design"><span><svg class="i" aria-hidden="true"><use href="#i-palette"/></svg> Diseño visual a medida</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>4 · PUNTO DE PARTIDA</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="base" value="cero" checked><span><svg class="i" aria-hidden="true"><use href="#i-sparkles"/></svg> Desde cero</span></label>
+            <label class="chip"><input type="radio" name="base" value="existente"><span><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg> Ya hay algo hecho</span></label>
+          </div>
+        </fieldset>
+      </form>
+
+      <aside class="estimator__result" aria-live="polite">
+        <span class="level-num">RESULTADO</span>
+        <h3 id="est-level">NIVEL 1 · QUICK QUEST</h3>
+        <div class="xp-bar" aria-hidden="true"><span id="est-bar"></span></div>
+        <dl class="est-stats">
+          <div><dt><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg> TIEMPO ESTIMADO</dt><dd id="est-time">—</dd></div>
+          <div><dt><svg class="i" aria-hidden="true"><use href="#i-target"/></svg> LO QUE MÁS PESA</dt><dd id="est-weight">—</dd></div>
+        </dl>
+        <p class="est-note">Estimación orientativa para ubicar tu idea. El precio y la fecha final van en la propuesta, después de conversar.</p>
+        <div class="est-actions">
+          <a href="contacto.html?servicio=software" class="btn btn-solid" id="est-send"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg> ENVIAR ESTIMACIÓN</a>
+          <button type="button" class="btn btn-outline" id="est-copy"><svg class="i" aria-hidden="true"><use href="#i-copy"/></svg> COPIAR</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="niveles" class="section">
+    <h2 class="section-title"><span class="tag">03</span> ELIGE TU NIVEL</h2>
+    <p class="section-lead">Tres tamaños de proyecto para que ubiques el tuyo. Cada cotización es a medida y con precio cerrado antes de empezar.</p>
+
+    <div class="levels-grid">
+      <article class="level-card tilt accent-cyan reveal">
+        <span class="level-num">NIVEL 1</span>
+        <h3>QUICK QUEST</h3>
+        <div class="level-hp" aria-hidden="true"><i></i><i class="off"></i><i class="off"></i></div>
+        <p class="level-for">Para resolver algo puntual, rápido.</p>
+        <ul>
+          <li>Script o automatización simple</li>
+          <li>Landing page de una sección</li>
+          <li>Arreglo o mejora en un proyecto existente</li>
+          <li>Guía de uso incluida</li>
+        </ul>
+        <p class="level-time"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg> Tiempo típico: días</p>
+        <a href="contacto.html?servicio=software&amp;nivel=1" class="btn btn-outline">ELEGIR</a>
+      </article>
+
+      <article class="level-card level-card--featured tilt accent-pink reveal">
+        <span class="level-flag">MÁS PEDIDO</span>
+        <span class="level-num">NIVEL 2</span>
+        <h3>MAIN QUEST</h3>
+        <div class="level-hp" aria-hidden="true"><i></i><i></i><i class="off"></i></div>
+        <p class="level-for">Para una herramienta completa y lista para usar.</p>
+        <ul>
+          <li>Web de varias páginas o app con varias pantallas</li>
+          <li>Instalador o APK listo para distribuir</li>
+          <li>Demos de avance durante el desarrollo</li>
+          <li>Código fuente + documentación</li>
+          <li>Soporte post-entrega</li>
+        </ul>
+        <p class="level-time"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg> Tiempo típico: algunas semanas</p>
+        <a href="contacto.html?servicio=software&amp;nivel=2" class="btn btn-solid">ELEGIR</a>
+      </article>
+
+      <article class="level-card tilt accent-yellow reveal">
+        <span class="level-num">NIVEL 3</span>
+        <h3>RAID</h3>
+        <div class="level-hp" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="level-for">Para un producto a medida en varias plataformas.</p>
+        <ul>
+          <li>Escritorio + móvil trabajando juntos</li>
+          <li>Integraciones con servicios externos</li>
+          <li>Desarrollo por fases con entregas parciales</li>
+          <li>Código fuente + documentación técnica</li>
+          <li>Soporte y mejoras acordadas</li>
+        </ul>
+        <p class="level-time"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg> Tiempo típico: por fases</p>
+        <a href="contacto.html?servicio=software&amp;nivel=3" class="btn btn-outline">ELEGIR</a>
+      </article>
+    </div>
+    <p class="levels-note">¿No sabes en qué nivel cae tu idea? Escríbeme igual y lo definimos juntos.</p>
+  </section>
+
+  <section id="casos" class="section">
+    <h2 class="section-title"><span class="tag">04</span> CASOS REALES</h2>
+    <p class="section-lead">Herramientas que diseñé, programé y publiqué yo. El mismo proceso que aplico a tu proyecto.</p>
+
+    <div class="case-grid">
+      <article class="case-card tilt accent-green reveal" data-repo="NayerControl">
+        <h3><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg> NayerControl</h3>
+        <dl>
+          <div><dt>PROBLEMA</dt><dd>Controlar un Android desde la PC exigía recordar comandos de consola.</dd></div>
+          <div><dt>SOLUCIÓN</dt><dd>App de escritorio con interfaz gráfica sobre scrcpy y adb, por USB y WiFi.</dd></div>
+          <div><dt>ENTREGA</dt><dd>Instalador para Windows publicado en GitHub Releases.</dd></div>
+        </dl>
+        <div class="tags"><span>Python</span><span>PySide6</span></div>
+        <a href="https://github.com/nayereulate/NayerControl" class="project-link" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg> Ver en GitHub <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </article>
+
+      <article class="case-card tilt accent-cyan reveal" data-repo="NayerVR">
+        <h3><svg class="i" aria-hidden="true"><use href="#i-vr"/></svg> NayerVR</h3>
+        <dl>
+          <div><dt>PROBLEMA</dt><dd>Usar una VR box genérica (tipo Cardboard) como monitor de la PC.</dd></div>
+          <div><dt>SOLUCIÓN</dt><dd>Streaming de pantalla al celular con corrección de lente y comandos de voz.</dd></div>
+          <div><dt>ENTREGA</dt><dd>Instalador de Windows + APK de Android que trabajan juntos.</dd></div>
+        </dl>
+        <div class="tags"><span>Python</span><span>Kotlin</span><span>ffmpeg</span></div>
+        <a href="https://github.com/nayereulate/NayerVR" class="project-link" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg> Ver en GitHub <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </article>
+
+      <article class="case-card tilt accent-yellow reveal" data-repo="DigitalBook">
+        <h3><svg class="i" aria-hidden="true"><use href="#i-book"/></svg> DigitalBook</h3>
+        <dl>
+          <div><dt>PROBLEMA</dt><dd>Las apps de notas para tablet no se sienten como un cuaderno real.</dd></div>
+          <div><dt>SOLUCIÓN</dt><dd>Cuadernos con animación de doblez de página y un panel minimalista de herramientas.</dd></div>
+          <div><dt>ENTREGA</dt><dd>APK para Android publicado en GitHub Releases.</dd></div>
+        </dl>
+        <div class="tags"><span>Kotlin</span><span>Compose</span></div>
+        <a href="https://github.com/nayereulate/DigitalBook" class="project-link" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg> Ver en GitHub <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </article>
+    </div>
+  </section>
+
+  <section id="stack" class="section">
+    <h2 class="section-title"><span class="tag">05</span> STACK</h2>
+    <p class="section-lead">Las herramientas con las que ya entregué proyectos. Si tu caso pide otra, la evaluamos juntos.</p>
+
+    <div class="stack">
+      <div class="stack-group reveal">
+        <h3>LENGUAJES</h3>
+        <div class="tags"><span>Python</span><span>Kotlin</span><span>JavaScript</span><span>HTML/CSS</span></div>
+      </div>
+      <div class="stack-group reveal">
+        <h3>ESCRITORIO</h3>
+        <div class="tags"><span>PySide6</span><span>Instaladores .exe</span></div>
+      </div>
+      <div class="stack-group reveal">
+        <h3>MÓVIL</h3>
+        <div class="tags"><span>Android</span><span>Jetpack Compose</span></div>
+      </div>
+      <div class="stack-group reveal">
+        <h3>HERRAMIENTAS</h3>
+        <div class="tags"><span>Git</span><span>GitHub</span><span>adb</span><span>scrcpy</span><span>ffmpeg</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <h2 class="section-title"><span class="tag">06</span> FAQ SOFTWARE</h2>
+    <p class="section-lead">Dudas típicas antes de pedir una herramienta.</p>
+
+    <div class="faq">
+      <details>
+        <summary>¿Me entregas el código fuente?</summary>
+        <p>Sí. Al cerrar el proyecto te entrego el código, el ejecutable o instalador y una guía de uso. El proyecto es tuyo.</p>
+      </details>
+      <details>
+        <summary>¿Te encargas de publicar la web o la app?</summary>
+        <p>Puedo dejarla publicada (por ejemplo en GitHub Pages o en tu hosting) o prepararte el APK/instalador para que lo distribuyas tú.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa si encuentro un fallo después de la entrega?</summary>
+        <p>Cada proyecto incluye un periodo de soporte para corregir errores. Mejoras o funciones nuevas se cotizan aparte.</p>
+      </details>
+      <details>
+        <summary>¿Puedes continuar un proyecto que empezó otra persona?</summary>
+        <p>Sí, si el stack lo permite. Primero reviso el código y te digo con honestidad si conviene continuarlo o rehacer partes.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cta-band reveal">
+      <h2>CUÉNTAME TU <span class="hl-cyan">IDEA</span></h2>
+      <p>Describe el problema que quieres resolver. Yo me encargo de proponer cómo construirlo.</p>
+      <div class="hero-cta">
+        <a href="contacto.html?servicio=software" class="btn btn-solid"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg> ENVIAR BRIEF</a>
+        <a href="contenido.html" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-video"/></svg> VER CONTENT LAB</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <button class="fx-toggle" type="button" data-fx-toggle aria-pressed="true"><svg class="i" aria-hidden="true"><use href="#i-sliders"/></svg><span data-fx-label>EFECTOS: ON</span></button>
+  <nav class="footer-nav" aria-label="Pie de página">
+    <a href="index.html">Mis links</a>
+    <a href="landing.html">Sobre mí</a>
+    <a href="servicios.html">Studio</a>
+    <a href="software.html">Software</a>
+    <a href="contenido.html">Contenido</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="https://github.com/nayereulate" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <p>PRESS START © 2026 · Nayer | Eulate · Nayer Studio · hecho con <svg class="i" aria-hidden="true"><use href="#i-invader"/></svg> pixel power</p>
+</footer>
+
+<button class="back-to-top" id="backTop" type="button" title="Volver arriba" aria-label="Volver arriba">▲</button>
+
+<script src="js/background.js"></script>
+<script src="js/github.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/site.js"></script>
+<script src="js/estimator.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>
