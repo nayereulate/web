@@ -116,7 +116,7 @@
       ['', '<span class="m">▸ compilando NayerVR...</span>'],
       ['', '<span class="p">✓</span> NayerVR-Setup.exe listo'],
       ['$ ', 'deploy web'],
-      ['', '<span class="p">✓</span> nayereulate.github.io/web']
+      ['', '<span class="p">✓</span> nayer.dev']
     ];
     const prompt = (txt) => '<span class="p">' + txt + '</span>';
     let html = '';
