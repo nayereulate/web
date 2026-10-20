@@ -1,7 +1,7 @@
 # Nayer | Eulate — web
 
 Sitio estático (HTML/CSS/JS, sin build) publicado en Vercel:
-https://www.nayer.dev/
+https://nayer.dev/
 
 ## Páginas
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.nayer.dev/sitemap.xml
+Sitemap: https://nayer.dev/sitemap.xml
