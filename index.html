@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nayer | Eulate — Dev friki, estudiante y creador de herramientas</title>
-<meta name="description" content="Nayer | Eulate — Estudiante · Streamer · Dev friki. Mis redes, mis creaciones y Nayer Studio, mi estudio de software y contenido, en un solo lugar.">
+<meta name="description" content="Nayer | Eulate — Estudiante, creador de contenido y dev friki. Entra a la comunidad (redes, proyectos y biografía) o a Nayer Studio (servicios, cotizaciones y contacto).">
 <meta name="theme-color" content="#09011a">
 <link rel="canonical" href="https://nayer.dev/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nayer | Eulate">
 <meta property="og:title" content="Nayer | Eulate — Dev friki, estudiante y creador de contenido">
-<meta property="og:description" content="Mis redes, mis creaciones y Nayer Studio en un solo lugar.">
+<meta property="og:description" content="Comunidad para seguidores y Nayer Studio para clientes.">
 <meta property="og:url" content="https://nayer.dev/">
 <meta property="og:image" content="https://nayer.dev/fotoPixel.jpg">
 <meta name="twitter:card" content="summary">
@@ -82,22 +82,14 @@
 <div class="vignette" aria-hidden="true"></div>
 <div class="cursor-glow" aria-hidden="true"></div>
 
-<!-- ===== Top strip ===== -->
-<header class="home-top">
-  <a class="avail-pill" href="contacto.html"><span class="live-dot" aria-hidden="true"></span> Disponible para proyectos</a>
-  <button class="cmdk-btn" type="button" data-cmdk aria-label="Abrir buscador del sitio">
-    <svg class="i" aria-hidden="true"><use href="#i-search"/></svg><span class="cmdk-btn__label">Buscar</span><kbd data-mod-key>Ctrl</kbd><kbd>K</kbd>
-  </button>
-</header>
-
-<main id="main">
+<main id="main" class="gate">
   <section class="hero">
 
     <div class="avatar-wrap">
       <div class="sun"></div>
       <div class="hero-avatar avatar-frame">
         <img src="fotoPixel.jpg" alt="Avatar pixel-art de Nayer Eulate" width="170" height="170">
-        <span class="status-dot" title="Disponible para proyectos"></span>
+        <span class="status-dot" title="En línea"></span>
       </div>
     </div>
 
@@ -110,58 +102,24 @@
     <h1 class="glitch" data-text="NAYER | EULATE">NAYER&nbsp;|&nbsp;EULATE</h1>
     <p class="tagline"><span id="typed"></span><span class="cursor">_</span></p>
 
-    <a class="gh-status" id="ghStatus" href="https://github.com/nayereulate" target="_blank" rel="noopener">
-      <svg class="i" aria-hidden="true"><use href="#i-github"/></svg><span class="gh-status__prompt">$ git log -1</span><span data-gh-text>conectando con GitHub...</span>
-    </a>
+    <p class="gate__prompt">&gt; ELIGE TU MODO DE JUEGO</p>
 
-    <nav class="social-grid" aria-label="Redes sociales">
-      <a class="social-btn reveal" data-color="youtube" href="https://www.youtube.com/@nayerdev" target="_blank" rel="noopener">
-        <span class="social-icon"><svg class="i" aria-hidden="true"><use href="#i-youtube"/></svg></span>
-        <span class="social-label">YouTube</span>
+    <nav class="doors" aria-label="Elige una experiencia">
+      <a class="door" href="landing.html" aria-label="Comunidad: mis redes, lo que construyo y mi biografía">
+        <span class="door__kicker">PLAYER 1 · SEGUIDORES</span>
+        <span class="icon-tile door__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-gamepad"/></svg></span>
+        <span class="door__title">COMUNIDAD</span>
+        <ul class="door__list"><li><svg class="i" aria-hidden="true"><use href="#i-link"/></svg>Mis redes</li><li><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>Lo que construyo</li><li><svg class="i" aria-hidden="true"><use href="#i-user"/></svg>Mi biografía</li></ul>
+        <span class="door__go">ENTRAR <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
       </a>
-      <a class="social-btn reveal" data-color="twitch" href="https://www.twitch.tv/nayer_eulate_m" target="_blank" rel="noopener">
-        <span class="social-icon"><svg class="i" aria-hidden="true"><use href="#i-twitch"/></svg></span>
-        <span class="social-label">Twitch</span>
-      </a>
-      <a class="social-btn reveal" data-color="instagram" href="https://www.instagram.com/nayer_eulate/" target="_blank" rel="noopener">
-        <span class="social-icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.5.5.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.06.06 1.42.06 4.13s-.01 3.07-.06 4.13c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.76 4.9 4.9 0 0 1-1.76 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.42.06-4.12.06s-3.07-.01-4.13-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.25-.64-.42-1.37-.47-2.43C2.01 15.07 2 14.7 2 12s.01-3.07.06-4.13c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76A4.9 4.9 0 0 1 5.44 2.53c.64-.25 1.37-.42 2.43-.47C8.93 2.01 9.3 2 12 2Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg></span>
-        <span class="social-label">Instagram</span>
-      </a>
-      <a class="social-btn reveal" data-color="tiktok" href="https://www.tiktok.com/@nayer.dev" target="_blank" rel="noopener">
-        <span class="social-icon"><svg class="i" aria-hidden="true"><use href="#i-tiktok"/></svg></span>
-        <span class="social-label">TikTok</span>
-      </a>
-      <a class="social-btn reveal" data-color="github" href="https://github.com/nayereulate" target="_blank" rel="noopener">
-        <span class="social-icon"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg></span>
-        <span class="social-label">GitHub</span>
-      </a>
-      <a class="social-btn reveal" data-color="discord" href="https://discord.gg/3p7HU2fUN" target="_blank" rel="noopener">
-        <span class="social-icon"><svg class="i" aria-hidden="true"><use href="#i-discord"/></svg></span>
-        <span class="social-label">Discord</span>
+      <a class="door" href="studio/index.html" aria-label="Nayer Studio: servicios, cotizaciones y contacto">
+        <span class="door__kicker">PLAYER 2 · CLIENTES</span>
+        <span class="icon-tile door__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg></span>
+        <span class="door__title">NAYER STUDIO</span>
+        <ul class="door__list"><li><svg class="i" aria-hidden="true"><use href="#i-code"/></svg>Servicios</li><li><svg class="i" aria-hidden="true"><use href="#i-calculator"/></svg>Cotizaciones</li><li><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>Contacto</li></ul>
+        <span class="door__go">ENTRAR <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
       </a>
     </nav>
-
-    <div class="hero-cta">
-      <a href="landing.html#creaciones" class="btn btn-solid"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg> VER MIS CREACIONES</a>
-      <a href="landing.html" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg> SOBRE NAYER</a>
-    </div>
-
-    <nav class="studio-links" aria-label="Nayer Studio">
-      <span class="studio-links__title"><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg> NAYER STUDIO</span>
-      <a href="software.html" class="studio-link" data-color="cyan"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg> SOFTWARE LAB</a>
-      <a href="contenido.html" class="studio-link" data-color="pink"><svg class="i" aria-hidden="true"><use href="#i-video"/></svg> CONTENT LAB</a>
-      <a href="contacto.html" class="studio-link" data-color="yellow"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg> COTIZAR</a>
-    </nav>
-
-    <dl class="hero-stats">
-      <div><dt>REPOS PÚBLICOS</dt><dd data-gh="repos">19</dd></div>
-      <div><dt>APPS PUBLICADAS</dt><dd>3</dd></div>
-      <div><dt>PLATAFORMAS</dt><dd>6</dd></div>
-    </dl>
-
-    <button class="share-btn" id="shareBtn" type="button">
-      <svg class="i" aria-hidden="true"><use href="#i-share"/></svg> COMPARTIR
-    </button>
 
   </section>
 </main>
@@ -171,12 +129,10 @@
 </section>
 
 <footer class="site-footer">
-  <button class="fx-toggle" type="button" data-fx-toggle aria-pressed="true"><svg class="i" aria-hidden="true"><use href="#i-sliders"/></svg><span data-fx-label>EFECTOS: ON</span></button>
-  <p>PRESS START © 2026 · Nayer | Eulate · <a href="servicios.html">Nayer Studio</a> · hecho con <svg class="i" aria-hidden="true"><use href="#i-invader"/></svg> pixel power</p>
+  <p>PRESS START © 2026 · Nayer | Eulate · hecho con <svg class="i" aria-hidden="true"><use href="#i-invader"/></svg> pixel power</p>
 </footer>
 
 <script src="js/background.js"></script>
-<script src="js/github.js"></script>
 <script src="js/effects.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/home.js"></script>

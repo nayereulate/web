@@ -11,73 +11,45 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/ui.css">
-<link rel="stylesheet" href="css/studio.css">
+<link rel="stylesheet" href="css/home.css">
 </head>
-<body>
+<body class="home">
 <script src="js/icons.js"></script>
-
-<a class="skip-link" href="#main">Saltar al contenido</a>
-
 <div id="bg"></div>
 <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
 <canvas id="bg-canvas" aria-hidden="true"></canvas>
 <div class="grid-floor" aria-hidden="true"></div>
 <div class="scanlines" aria-hidden="true"></div>
 <div class="vignette" aria-hidden="true"></div>
-<div class="cursor-glow" aria-hidden="true"></div>
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-<header class="topbar">
-  <a class="brand" href="index.html">NAYER<span>|</span>EULATE</a>
-  <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="topnav">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="topnav" id="topnav" aria-label="Principal">
-    <a href="landing.html">Sobre mí</a>
-    <a href="landing.html#creaciones">Proyectos</a>
-    <a href="servicios.html">Studio</a>
-    <a href="software.html">Software</a>
-    <a href="contenido.html">Contenido</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-  <button class="cmdk-btn" type="button" data-cmdk aria-label="Abrir buscador del sitio"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg><span class="cmdk-btn__label">Buscar</span><kbd data-mod-key>Ctrl</kbd><kbd>K</kbd></button>
-  <a class="back-btn" href="contacto.html">COTIZAR ▶</a>
-</header>
-
-<main id="main">
-
-  <section class="hero page-hero">
-    <span class="kicker">ERROR 404</span>
-    <h1 class="glitch" data-text="GAME OVER">GAME&nbsp;OVER</h1>
-    <p class="hero-sub">Esta página no existe o cambió de lugar. Elige un checkpoint para continuar.</p>
-    <div class="hero-cta">
-      <a href="index.html" class="btn btn-solid"><svg class="i" aria-hidden="true"><use href="#i-gamepad"/></svg> CONTINUE?</a>
-      <a href="servicios.html" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg> NAYER STUDIO</a>
-      <a href="contacto.html" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg> CONTACTO</a>
-    </div>
+<main id="main" class="gate">
+  <section class="hero">
+    <span class="badge badge-pink">ERROR 404</span>
+    <h1 class="glitch" data-text="GAME OVER" style="margin-top:22px">GAME&nbsp;OVER</h1>
+    <p class="tagline">Esta página no existe o cambió de lugar.</p>
+    <p class="gate__prompt">&gt; CONTINUE? ELIGE UN CHECKPOINT</p>
+    <nav class="doors" aria-label="Elige una experiencia">
+      <a class="door" href="landing.html" aria-label="Comunidad: mis redes, lo que construyo y mi biografía">
+        <span class="door__kicker">PLAYER 1 · SEGUIDORES</span>
+        <span class="icon-tile door__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-gamepad"/></svg></span>
+        <span class="door__title">COMUNIDAD</span>
+        <ul class="door__list"><li><svg class="i" aria-hidden="true"><use href="#i-link"/></svg>Mis redes</li><li><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>Lo que construyo</li><li><svg class="i" aria-hidden="true"><use href="#i-user"/></svg>Mi biografía</li></ul>
+        <span class="door__go">ENTRAR <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      </a>
+      <a class="door" href="studio/index.html" aria-label="Nayer Studio: servicios, cotizaciones y contacto">
+        <span class="door__kicker">PLAYER 2 · CLIENTES</span>
+        <span class="icon-tile door__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg></span>
+        <span class="door__title">NAYER STUDIO</span>
+        <ul class="door__list"><li><svg class="i" aria-hidden="true"><use href="#i-code"/></svg>Servicios</li><li><svg class="i" aria-hidden="true"><use href="#i-calculator"/></svg>Cotizaciones</li><li><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>Contacto</li></ul>
+        <span class="door__go">ENTRAR <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      </a>
+    </nav>
   </section>
-
 </main>
-
-<footer class="site-footer">
-  <button class="fx-toggle" type="button" data-fx-toggle aria-pressed="true"><svg class="i" aria-hidden="true"><use href="#i-sliders"/></svg><span data-fx-label>EFECTOS: ON</span></button>
-  <nav class="footer-nav" aria-label="Pie de página">
-    <a href="index.html">Mis links</a>
-    <a href="landing.html">Sobre mí</a>
-    <a href="servicios.html">Studio</a>
-    <a href="software.html">Software</a>
-    <a href="contenido.html">Contenido</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="https://github.com/nayereulate" target="_blank" rel="noopener">GitHub</a>
-  </nav>
-  <p>PRESS START © 2026 · Nayer | Eulate · Nayer Studio · hecho con <svg class="i" aria-hidden="true"><use href="#i-invader"/></svg> pixel power</p>
-</footer>
 
 <script src="js/background.js"></script>
 <script src="js/effects.js"></script>
-<script src="js/site.js"></script>
 <script src="js/ui.js"></script>
 </body>
 </html>

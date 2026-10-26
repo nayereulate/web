@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://nayer.dev/</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://nayer.dev/landing.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://nayer.dev/servicios.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://nayer.dev/software.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://nayer.dev/contenido.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://nayer.dev/contacto.html</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://nayer.dev/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://nayer.dev/landing.html</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://nayer.dev/studio/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://nayer.dev/studio/software.html</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://nayer.dev/studio/contenido.html</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://nayer.dev/studio/cotizar.html</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://nayer.dev/studio/contacto.html</loc><lastmod>2026-10-25</lastmod></url>
 </urlset>

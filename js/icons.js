@@ -13,6 +13,7 @@
 
   const line = {
     code: '<path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>',
+    menu: '<path d="M3 6h18M3 12h18M3 18h18"/>',
     terminal: '<path d="m4 17 6-6-6-6M12 19h8"/>',
     globe: '<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>',
     monitor: '<rect x="2" y="3" width="20" height="14" rx="1"/><path d="M8 21h8M12 17v4"/>',

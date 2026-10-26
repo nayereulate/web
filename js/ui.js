@@ -78,28 +78,51 @@
   syncFxButtons();
 
   // ---------------- Paleta de comandos ----------------
-  const COMMANDS = [
-    { g: 'Páginas', label: 'Inicio · mis links', icon: 'link', href: 'index.html', k: 'home hub redes' },
-    { g: 'Páginas', label: 'Sobre mí', icon: 'user', href: 'landing.html', k: 'about nayer historia umss' },
-    { g: 'Páginas', label: 'Proyectos', icon: 'folder', href: 'landing.html#creaciones', k: 'creaciones portafolio apps' },
-    { g: 'Páginas', label: 'Releases y descargas', icon: 'download', href: 'landing.html#releases', k: 'descargar apk exe versiones' },
-    { g: 'Páginas', label: 'Nayer Studio', icon: 'briefcase', href: 'servicios.html', k: 'agencia servicios estudio' },
-    { g: 'Páginas', label: 'Software Lab', icon: 'code', href: 'software.html', k: 'desarrollo web apps android escritorio' },
-    { g: 'Páginas', label: 'Estimador de proyecto', icon: 'calculator', href: 'software.html#estimador', k: 'cotizar calcular precio tiempo' },
-    { g: 'Páginas', label: 'Niveles de proyecto', icon: 'layers', href: 'software.html#niveles', k: 'paquetes planes quest raid' },
-    { g: 'Páginas', label: 'Content Lab', icon: 'video', href: 'contenido.html', k: 'contenido edicion stream obs' },
-    { g: 'Páginas', label: 'Colabs y marcas', icon: 'megaphone', href: 'contenido.html#colabs', k: 'patrocinio sponsor review' },
-    { g: 'Páginas', label: 'Contacto · enviar brief', icon: 'chat', href: 'contacto.html', k: 'cotizar formulario mensaje' },
+  // Rutas relativas a la raíz del sitio: las páginas de /studio declaran data-root="../"
+  const ROOT = root.getAttribute('data-root') || '';
+  const STUDIO = root.getAttribute('data-experience') === 'studio';
+
+  const SOCIAL = [
     { g: 'Redes', label: 'YouTube', icon: 'youtube', href: 'https://www.youtube.com/@nayerdev', ext: true },
     { g: 'Redes', label: 'Twitch', icon: 'twitch', href: 'https://www.twitch.tv/nayer_eulate_m', ext: true, k: 'stream directo' },
     { g: 'Redes', label: 'TikTok', icon: 'tiktok', href: 'https://www.tiktok.com/@nayer.dev', ext: true },
     { g: 'Redes', label: 'GitHub', icon: 'github', href: 'https://github.com/nayereulate', ext: true, k: 'codigo repos' },
-    { g: 'Redes', label: 'Discord', icon: 'discord', href: 'https://discord.gg/3p7HU2fUN', ext: true, k: 'comunidad' },
-    { g: 'Acciones', label: 'Escribir por WhatsApp', icon: 'whatsapp', href: WHATSAPP, ext: true, k: 'contacto mensaje' },
+    { g: 'Redes', label: 'Discord', icon: 'discord', href: 'https://discord.gg/3p7HU2fUN', ext: true, k: 'comunidad' }
+  ];
+  const COMMON = [
     { g: 'Acciones', label: 'Compartir esta página', icon: 'share', run: sharePage, k: 'copiar enlace link' },
-    { g: 'Acciones', label: 'Activar / desactivar efectos', icon: 'sliders', run: () => setFx(!fxOn()), k: 'crt animaciones rendimiento ligero' },
     { g: 'Acciones', label: 'Volver arriba', icon: 'arrow-up', run: () => window.scrollTo({ top: 0, behavior: 'smooth' }), k: 'top inicio' }
   ];
+
+  // Experiencia de seguidores (estilo retro)
+  const FAN_COMMANDS = [
+    { g: 'Comunidad', label: 'Inicio', icon: 'gamepad', href: 'index.html', k: 'home portal' },
+    { g: 'Comunidad', label: 'Mis redes', icon: 'link', href: 'landing.html#redes', k: 'youtube twitch tiktok instagram' },
+    { g: 'Comunidad', label: 'Sobre mí', icon: 'user', href: 'landing.html#sobre-nayer', k: 'about biografia historia umss' },
+    { g: 'Comunidad', label: 'Lo que construyo', icon: 'folder', href: 'landing.html#creaciones', k: 'creaciones proyectos portafolio apps' },
+    { g: 'Comunidad', label: 'Releases y descargas', icon: 'download', href: 'landing.html#releases', k: 'descargar apk exe versiones' },
+    { g: 'Comunidad', label: 'Apoyar el proyecto', icon: 'heart', href: 'landing.html#apoyar', k: 'donar donacion qr' },
+    { g: 'Nayer Studio', label: 'Ir a Nayer Studio (clientes)', icon: 'briefcase', href: 'studio/index.html', k: 'servicios contratar agencia cotizar' }
+  ].concat(SOCIAL, [
+    { g: 'Acciones', label: 'Activar / desactivar efectos', icon: 'sliders', run: () => setFx(!fxOn()), k: 'crt animaciones rendimiento ligero' }
+  ], COMMON);
+
+  // Experiencia de clientes (Nayer Studio)
+  const STUDIO_COMMANDS = [
+    { g: 'Nayer Studio', label: 'Inicio del estudio', icon: 'briefcase', href: 'studio/index.html', k: 'home servicios' },
+    { g: 'Nayer Studio', label: 'Desarrollo de software', icon: 'code', href: 'studio/software.html', k: 'web apps android escritorio automatizacion bots' },
+    { g: 'Nayer Studio', label: 'Planes de software', icon: 'layers', href: 'studio/software.html#planes', k: 'niveles paquetes precio' },
+    { g: 'Nayer Studio', label: 'Casos de proyecto', icon: 'folder', href: 'studio/software.html#casos', k: 'portafolio nayercontrol nayervr digitalbook' },
+    { g: 'Nayer Studio', label: 'Contenido y marcas', icon: 'video', href: 'studio/contenido.html', k: 'edicion stream obs colaboracion patrocinio' },
+    { g: 'Nayer Studio', label: 'Cotizar un proyecto', icon: 'calculator', href: 'studio/cotizar.html', k: 'presupuesto estimar precio tiempo brief' },
+    { g: 'Nayer Studio', label: 'Contacto', icon: 'chat', href: 'studio/contacto.html', k: 'whatsapp telegram mensaje' },
+    { g: 'Contacto', label: 'Escribir por WhatsApp', icon: 'whatsapp', href: WHATSAPP, ext: true, k: 'mensaje chat' },
+    { g: 'Contacto', label: 'Escribir por Telegram', icon: 'send', href: (window.NS_CONFIG && window.NS_CONFIG.telegram) || 'https://t.me/+59168518643', ext: true, k: 'mensaje chat' },
+    { g: 'Comunidad', label: 'Ir a la comunidad (seguidores)', icon: 'gamepad', href: 'landing.html', k: 'redes proyectos fan' }
+  ].concat(COMMON);
+
+  const COMMANDS = (STUDIO ? STUDIO_COMMANDS : FAN_COMMANDS).map((c) =>
+    c.href && !c.ext ? Object.assign({}, c, { href: ROOT + c.href }) : c);
 
   const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 

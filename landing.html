@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sobre mí y proyectos — Nayer | Eulate</title>
-<meta name="description" content="Nayer | Eulate — Estudiante de Ingeniería Informática, streamer y dev friki. Construyo herramientas por curiosidad, comparto releases en GitHub y documento todo el proceso en vivo.">
+<title>Comunidad — Nayer | Eulate</title>
+<meta name="description" content="Comunidad de Nayer | Eulate: redes, las herramientas que construyo, releases para descargar y mi historia como estudiante de Ingeniería Informática y creador de contenido.">
 <meta name="theme-color" content="#09011a">
 <link rel="canonical" href="https://nayer.dev/landing.html">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Nayer | Eulate">
 <meta property="og:title" content="Nayer | Eulate — Dev friki, estudiante y creador de contenido">
-<meta property="og:description" content="Estudiante de Ingeniería Informática, streamer y dev friki. Mis herramientas, releases y Nayer Studio.">
+<meta property="og:description" content="Mis redes, lo que construyo y mi historia como dev friki y creador de contenido.">
 <meta property="og:url" content="https://nayer.dev/landing.html">
 <meta property="og:image" content="https://nayer.dev/fotoPixel.jpg">
 <meta name="twitter:card" content="summary">
@@ -21,7 +21,6 @@
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/ui.css">
-<link rel="stylesheet" href="css/studio.css">
 <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
@@ -44,15 +43,14 @@
     <span></span><span></span><span></span>
   </button>
   <nav class="topnav" id="topnav" aria-label="Principal">
-    <a href="landing.html" aria-current="page">Sobre mí</a>
+    <a href="#redes">Redes</a>
+    <a href="#sobre-nayer">Sobre mí</a>
     <a href="#creaciones">Proyectos</a>
-    <a href="servicios.html">Studio</a>
-    <a href="software.html">Software</a>
-    <a href="contenido.html">Contenido</a>
-    <a href="contacto.html">Contacto</a>
+    <a href="#releases">Releases</a>
+    <a href="#apoyar">Apoyar</a>
   </nav>
   <button class="cmdk-btn" type="button" data-cmdk aria-label="Abrir buscador del sitio"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg><span class="cmdk-btn__label">Buscar</span><kbd data-mod-key>Ctrl</kbd><kbd>K</kbd></button>
-  <a class="back-btn" href="contacto.html">COTIZAR ▶</a>
+  <a class="back-btn" href="studio/index.html" title="Servicios, cotizaciones y contacto">NAYER STUDIO ▶</a>
 </header>
 
 <main id="main">
@@ -60,7 +58,7 @@
   <section class="hero">
     <div class="hero-avatar avatar-frame reveal">
       <img src="fotoPixel.jpg" alt="Avatar pixel-art de Nayer Eulate">
-      <span class="status-dot" title="Disponible para proyectos"></span>
+      <span class="status-dot" title="En línea"></span>
     </div>
     <div class="badges">
       <span class="badge badge-cyan">STUDENT</span>
@@ -70,15 +68,52 @@
     <h1 class="glitch" data-text="NAYER | EULATE">NAYER&nbsp;|&nbsp;EULATE</h1>
     <p class="hero-sub">Estudiante de Ingeniería Informática que construye herramientas por pura curiosidad friki. Código, gaming y anime de fondo, todo el tiempo</p>
     <div class="hero-cta">
-      <a href="#creaciones" class="btn btn-solid"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg> VER MIS CREACIONES</a>
-      <a href="servicios.html" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg> NAYER STUDIO</a>
-      <a href="#releases" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-package"/></svg> RELEASES</a>
-      <a href="#donatePanel" class="btn btn-outline donate-trigger"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg> APOYAR</a>
+      <a href="#creaciones" class="btn btn-solid"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg> LO QUE CONSTRUYO</a>
+      <a href="#redes" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-link"/></svg> MIS REDES</a>
+      <a href="#apoyar" class="btn btn-outline"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg> APOYAR</a>
     </div>
   </section>
 
+  <section id="redes" class="section">
+    <h2 class="section-title"><span class="tag">01</span> MIS REDES</h2>
+    <p class="section-lead">Donde publico, transmito y comparto el proceso. Elige tu plataforma favorita.</p>
+    <nav class="social-grid" aria-label="Redes sociales">
+      <a class="social-btn reveal" data-color="youtube" href="https://www.youtube.com/@nayerdev" target="_blank" rel="noopener">
+        <span class="social-icon"><svg class="i" aria-hidden="true"><use href="#i-youtube"/></svg></span>
+        <span class="social-label">YouTube</span>
+        <span class="social-sub">Videos y tutoriales</span>
+      </a>
+      <a class="social-btn reveal" data-color="twitch" href="https://www.twitch.tv/nayer_eulate_m" target="_blank" rel="noopener">
+        <span class="social-icon"><svg class="i" aria-hidden="true"><use href="#i-twitch"/></svg></span>
+        <span class="social-label">Twitch</span>
+        <span class="social-sub">Directos</span>
+      </a>
+      <a class="social-btn reveal" data-color="instagram" href="https://www.instagram.com/nayer_eulate/" target="_blank" rel="noopener">
+        <span class="social-icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.5.5.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.06.06 1.42.06 4.13s-.01 3.07-.06 4.13c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.76 4.9 4.9 0 0 1-1.76 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.42.06-4.12.06s-3.07-.01-4.13-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.25-.64-.42-1.37-.47-2.43C2.01 15.07 2 14.7 2 12s.01-3.07.06-4.13c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76A4.9 4.9 0 0 1 5.44 2.53c.64-.25 1.37-.42 2.43-.47C8.93 2.01 9.3 2 12 2Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg></span>
+        <span class="social-label">Instagram</span>
+        <span class="social-sub">Día a día</span>
+      </a>
+      <a class="social-btn reveal" data-color="tiktok" href="https://www.tiktok.com/@nayer.dev" target="_blank" rel="noopener">
+        <span class="social-icon"><svg class="i" aria-hidden="true"><use href="#i-tiktok"/></svg></span>
+        <span class="social-label">TikTok</span>
+        <span class="social-sub">Clips cortos</span>
+      </a>
+      <a class="social-btn reveal" data-color="github" href="https://github.com/nayereulate" target="_blank" rel="noopener">
+        <span class="social-icon"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg></span>
+        <span class="social-label">GitHub</span>
+        <span class="social-sub">Mi código</span>
+      </a>
+      <a class="social-btn reveal" data-color="discord" href="https://discord.gg/3p7HU2fUN" target="_blank" rel="noopener">
+        <span class="social-icon"><svg class="i" aria-hidden="true"><use href="#i-discord"/></svg></span>
+        <span class="social-label">Discord</span>
+        <span class="social-sub">La comunidad</span>
+      </a>
+    </nav>
+    <p class="gh-live" id="ghStatus"><span class="live-dot" aria-hidden="true"></span><svg class="i" aria-hidden="true"><use href="#i-github"/></svg><span data-gh-text>Conectando con GitHub...</span></p>
+  </section>
+
   <section id="sobre-nayer" class="section">
-    <h2 class="section-title"><span class="tag">01</span> SOBRE NAYER</h2>
+    <h2 class="section-title"><span class="tag">02</span> SOBRE NAYER</h2>
 
     <div class="about-grid">
       <div class="about-text">
@@ -92,13 +127,13 @@
         mezcla de curiosidad friki y ganas de crear es lo que me empuja a construir cosas útiles todo el
         tiempo, no solo proyectos de clase.</p>
 
-        <p>No tengo una empresa detrás ni pretendo tenerla todavía — soy un <strong>dev friki estudiante</strong>
+        <p>No hay una empresa grande detrás: soy un <strong>dev friki estudiante</strong>
         que construye herramientas porque disfruta resolver problemas reales, ya sea un script de cinco
         minutos o una app completa. Cada proyecto es una excusa para aprender algo nuevo.</p>
 
         <p>La creación de contenido no es solo entretenimiento para mí: es donde documento el proceso.
         De esa mezcla nació <strong>Nayer Studio</strong>, mi estudio independiente para construir software
-        y contenido para otras personas.</p>
+        y contenido para otras personas (si buscas contratarme, <a href="studio/index.html">pasa por aquí</a>).</p>
       </div>
 
       <div class="pillars">
@@ -127,7 +162,7 @@
   </section>
 
   <section id="creaciones" class="section">
-    <h2 class="section-title"><span class="tag">02</span> MIS CREACIONES</h2>
+    <h2 class="section-title"><span class="tag">03</span> LO QUE CONSTRUYO</h2>
     <p class="section-lead">Herramientas que construyo por curiosidad friki — de la idea al ejecutable, aprendiendo en el camino.</p>
 
     <div class="filter-bar" role="group" aria-label="Filtrar proyectos" data-filter-target="#projectsGrid">
@@ -186,7 +221,7 @@
   </section>
 
   <section id="releases" class="section">
-    <h2 class="section-title"><span class="tag">03</span> RELEASES</h2>
+    <h2 class="section-title"><span class="tag">04</span> RELEASES</h2>
     <p class="section-lead">Últimas versiones publicadas de mis herramientas en GitHub. Esta lista crece cada vez que sale un build nuevo.</p>
 
     <div class="releases-grid" id="releasesGrid">
@@ -198,38 +233,42 @@
     </div>
   </section>
 
-  <section id="servicios" class="section">
-    <h2 class="section-title"><span class="tag">04</span> NAYER STUDIO</h2>
-    <p class="section-lead">Lo que construyo para mí, ahora también para ti. Mi estudio independiente tiene dos divisiones:</p>
-
-    <div class="division-grid">
-      <a class="division-card tilt accent-cyan reveal" href="software.html">
-        <span class="division-label">DIVISIÓN 01</span>
-        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-save"/></svg></span>
-        <h3>SOFTWARE LAB</h3>
-        <p>Webs, apps de escritorio, apps Android, automatizaciones y bots a medida.</p>
-        <span class="division-go">ENTRAR ▶</span>
-      </a>
-      <a class="division-card tilt accent-pink reveal" href="contenido.html">
-        <span class="division-label">DIVISIÓN 02</span>
-        <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-video"/></svg></span>
-        <h3>CONTENT LAB</h3>
-        <p>Edición de video, setups de stream, identidad visual retro y colaboraciones con marcas.</p>
-        <span class="division-go">ENTRAR ▶</span>
-      </a>
-    </div>
-
-    <div class="section-cta">
-      <a href="servicios.html" class="btn btn-solid"><svg class="i" aria-hidden="true"><use href="#i-map"/></svg> CONOCER EL STUDIO</a>
+  <section id="apoyar" class="section">
+    <h2 class="section-title"><span class="tag">05</span> APOYA LOS PROYECTOS</h2>
+    <div class="support-grid">
+      <div>
+        <p class="section-lead" style="margin-bottom:20px">Todo lo que construyo es gratis y de código abierto. Cada donación ayuda a conseguir licencias y equipo para seguir creando herramientas y contenido mientras estudio.</p>
+        <ul class="support-list">
+          <li><svg class="i" aria-hidden="true"><use href="#i-star"/></svg> Dale una estrella a los repos en GitHub</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-share"/></svg> Comparte mis apps con quien le sirvan</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-broadcast"/></svg> Pasa por los directos y saluda</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg> Dona con el QR, cualquier monto suma</li>
+        </ul>
+      </div>
+      <div class="qr-frame support-qr">
+        <img src="QRdonaciones.jpeg" alt="Código QR para donaciones" loading="lazy">
+        <span class="qr-corner qr-corner--tl"></span>
+        <span class="qr-corner qr-corner--tr"></span>
+        <span class="qr-corner qr-corner--bl"></span>
+        <span class="qr-corner qr-corner--br"></span>
+      </div>
     </div>
   </section>
 
   <section id="contacto" class="section section-contact">
-    <h2 class="section-title"><span class="tag">05</span> CONTACTO</h2>
-    <p class="section-lead">¿Tienes un proyecto en mente, una herramienta que te gustaría que exista, o solo quieres saludar?</p>
-    <a class="btn btn-solid btn-big" href="contacto.html"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg> ENVIAR BRIEF</a>
-    <a class="btn btn-outline" href="https://wa.me/59168518643" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg> WHATSAPP</a>
-    <a class="btn btn-outline" href="index.html"><svg class="i" aria-hidden="true"><use href="#i-link"/></svg> TODOS MIS LINKS</a>
+    <h2 class="section-title"><span class="tag">06</span> HABLEMOS</h2>
+    <p class="section-lead">¿Una idea, una duda sobre mis apps o solo quieres saludar? La comunidad vive en Discord.</p>
+    <a class="btn btn-solid btn-big" href="https://discord.gg/3p7HU2fUN" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-discord"/></svg> UNIRME AL DISCORD</a>
+    <a class="btn btn-outline" href="index.html"><svg class="i" aria-hidden="true"><use href="#i-arrow-left"/></svg> VOLVER AL INICIO</a>
+
+    <a class="studio-banner" href="studio/index.html">
+      <span class="icon-tile" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg></span>
+      <span class="studio-banner__text">
+        <strong>¿Quieres contratarme?</strong>
+        <span>Servicios de software y contenido, cotizaciones y contacto por WhatsApp o Telegram en Nayer Studio.</span>
+      </span>
+      <span class="studio-banner__go">IR AL STUDIO <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+    </a>
   </section>
 
 </main>
@@ -237,15 +276,14 @@
 <footer class="site-footer">
   <button class="fx-toggle" type="button" data-fx-toggle aria-pressed="true"><svg class="i" aria-hidden="true"><use href="#i-sliders"/></svg><span data-fx-label>EFECTOS: ON</span></button>
   <nav class="footer-nav" aria-label="Pie de página">
-    <a href="index.html">Mis links</a>
-    <a href="landing.html">Sobre mí</a>
-    <a href="servicios.html">Studio</a>
-    <a href="software.html">Software</a>
-    <a href="contenido.html">Contenido</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="https://github.com/nayereulate" target="_blank" rel="noopener">GitHub</a>
+    <a href="index.html">Inicio</a>
+    <a href="#redes">Redes</a>
+    <a href="#creaciones">Proyectos</a>
+    <a href="#releases">Releases</a>
+    <a href="#apoyar">Apoyar</a>
+    <a href="studio/index.html">Nayer Studio</a>
   </nav>
-  <p>PRESS START © 2026 · Nayer | Eulate · Nayer Studio · hecho con <svg class="i" aria-hidden="true"><use href="#i-invader"/></svg> pixel power</p>
+  <p>PRESS START © 2026 · Nayer | Eulate · hecho con <svg class="i" aria-hidden="true"><use href="#i-invader"/></svg> pixel power</p>
 </footer>
 
 <!-- Widget de donaciones: flotante a la derecha, siempre visible -->
